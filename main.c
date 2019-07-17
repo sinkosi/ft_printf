@@ -13,5 +13,6 @@ int main(int argc, char **argv)
 	ft_putendl(RED"THIS IS A TEST");
 	ft_putstr(eoc);
 	ft_putendl("CAN I UNDERLINE THIS");
+	ft_print_str("LIKE THIS", 1);
 	return (0);
 }
