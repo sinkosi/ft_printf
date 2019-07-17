@@ -25,6 +25,7 @@ int	main(int argc, char **argv)
 	ft_putendl(RED"THIS IS A TEST");
 	ft_putstr(RESET);
 	ft_putendl("CAN I UNDERLINE THIS");
-	ft_print_str("LIKE THIS", 1);
+	ft_print_str("LIKE THIS\n", 1);
+	ft_printf("print a number\n");
 	return (0);
 }

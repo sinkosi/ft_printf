@@ -1,4 +1,4 @@
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 int	ft_printf(const char *format, ...)
 {
@@ -15,4 +15,11 @@ int	ft_printf(const char *format, ...)
 			size += ft_print_char(format[i]);
 		else
 		{
-			
+			i++;
+			size += ft_convert(*format + i, printflst);
+		}
+		i++;
+	}
+	va_end(printflst);
+	return (size);
+}

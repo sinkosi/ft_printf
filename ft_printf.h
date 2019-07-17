@@ -48,6 +48,7 @@ typedef struct	s_printf
 	char	z;
 	char	ll;
 	char	j;
+	char	specifier;
 }				t_printf;
 
 /*
@@ -136,8 +137,7 @@ int				ft_print_char(int c);
 int				ft_print_str(char *str, int precision_point);
 int				ft_print_wchar(wchar_t c);
 int				ft_print_wstr(wchar_t *str, int precision_point);
-/*
-**void	ft_print_all;
-*/
+void				ft_print_width(int space);
+int				ft_convert(char **format, va_list printflst);
 
 #endif
