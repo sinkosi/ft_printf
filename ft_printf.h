@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 10:51:35 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/17 14:34:41 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/07/19 16:19:11 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,7 +137,7 @@ int				ft_print_char(int c);
 int				ft_print_str(char *str, int precision_point);
 int				ft_print_wchar(wchar_t c);
 int				ft_print_wstr(wchar_t *str, int precision_point);
-void				ft_print_width(int space);
+void			ft_print_width(int space);
 int				ft_convert(char **format, va_list printflst);
 
 #endif
