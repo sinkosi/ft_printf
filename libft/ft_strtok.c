@@ -31,3 +31,31 @@ char	*ft_strtok(char *str, const char *delim)
 	(i = NULL);
 	return (str);
 }
+/*
+char	*ft_strtok(char	*str, const char *delim)
+{
+	static char	*i = NULL;
+	char		*ptr;
+	int		n;
+
+	n = 0;
+	ptr = NULL;
+	if (str != NULL)
+		i = ft_strdup(str);
+	while (*i != '\0')
+	{
+		if (n == 0 && i != delim)
+		{
+			n = 1;
+			ptr = i;
+		}
+		else if (n == 1 && i == delim)
+		{
+			*i = '\0';
+			i += 1;
+			break;
+		}
+		i += 1;
+	}
+	return (ptr);
+}*/

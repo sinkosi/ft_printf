@@ -1,5 +1,49 @@
+#########################
+#	LIBRARY NAME	#
+#########################
 NAME	= libft.a
 
+#########################
+#	DIRECTORIES	#
+#########################
+INC_DIR		=	./includes/
+SRC_DIR		=	./srcs/
+OBJ_DIR		=	./obj/
+
+#########################
+#	COLOURS		#
+#########################
+NOC		= \033[0m
+BOLD		= \033[1m
+UNDERLINE	= \033[4m
+#BOLD ON
+RED		= \033[1;31m
+GREEN		= \033[1;32m
+YELLOW		= \033[1;33m
+BLUE		= \033[1;34m
+MAGENTA		= \033[1,35m
+CYAN		= \033[1;36m
+WHITE		= \033[1;0m
+
+#########################
+#	COMPILER	#
+#########################
+#Chosen compiler as prescribed by WTC_
+CC		= clang
+
+#Compile flags as stipulated by 42.
+CCFLAG	= -Wall -Wextra -Werror
+
+#Additional Compilation flags
+EXTRAS	= -c -I
+
+OUTPUT	= 	@echo	"$(GREEN)$(NAME) has been created."\
+			"$(BLUE)\nThis library is the intellectual property of"\
+			"$(CYAN)\nSIBONELO NKOSI (SINKOSI) & WETHINKCODE_ (NPC)$(WHITE)"\
+
+#########################
+#	FILES		#
+#########################
 CTYPE		=	ft_islower.c	\
 			ft_isupper.c	\
 			ft_isalpha.c	\
@@ -45,8 +89,10 @@ STRING		=	ft_memset.c		\
 		  ft_strlcat.c		\
 		  ft_strchr.c		\
 		  ft_strrchr.c		\
+		  ft_strlchr.c		\
 		  ft_strstr.c		\
 		  ft_strnstr.c		\
+		  ft_strlstr.c		\
 		  ft_strcasestr.c	\
 		  ft_strcmp.c		\
 		  ft_strncmp.c		\
@@ -60,8 +106,9 @@ STRING		=	ft_memset.c		\
 		  ft_strequ.c		\
   		  ft_strnequ.c		\
 		  ft_strreverse.c	\
-		  ft_strspn.c		\
+		  #ft_strspn.c		\
 		  ft_strcspn.c		\
+		  ft_strtok.c
 
 MATH		= 	ft_div_mod.c		\
 			ft_factorial.c		\
@@ -75,9 +122,7 @@ MATH		= 	ft_div_mod.c		\
 			ft_fabs.c		\
 			ft_sine.c		\
 
-
-#SRC		=	$(wildcard *.c) #COMMENTED OUT
-SRC		=	ft_atoi.c			\
+SRC		= ft_atoi.c			\
   		  ft_striter.c		\
   		  ft_striteri.c		\
   		  ft_strmap.c		\
@@ -85,10 +130,10 @@ SRC		=	ft_atoi.c			\
 		  ft_strsub.c		\
 		  ft_strjoin.c		\
 		  ft_strtrim.c		\
-		  ft_strtrim_delim.c\
+		  ft_strtrim_delim.c	\
 		  ft_strsplit.c		\
 		  ft_numlen.c		\
-		  ft_itoa.c			\
+		  ft_itoa.c		\
 		  ft_putchar.c		\
 		  ft_putstr.c		\
 		  ft_putendl.c		\
@@ -106,7 +151,7 @@ SRC		=	ft_atoi.c			\
 		  ft_strlowcase.c	\
 		  ft_strupcase.c	\
 		  ft_strcapitalize.c	\
-		  ft_swap.c			\
+		  ft_swap.c		\
 		  ft_numlen_base.c	\
 		  ft_itoa_base.c	\
 		  ft_putnbr_base.c	\
@@ -117,65 +162,37 @@ SRC		=	ft_atoi.c			\
 #		  test.c		\
 #		  main.c			\
 
+#OBJ_A		=	$(addprefix$(OBJ_DIR), $(OFILE_A))
 OBJ_A		=	$(CTYPE:.c=.o)
 OBJ_B		=	$(STRING:.c=.o)
 OBJ_C		=	$(MATH:.c=.o)
-OBJ_D		=	$(SRC:.c=.o) 
-       			
+OBJ_D		=	$(SRC:.c=.o)
 
-#COLOURS
-NOC		= \033[0m
-BOLD		= \033[1m
-UNDERLINE	= \033[4m
-#COLOUR LIST BELOW WITH BOLD ON
-RED		= \033[1;31m
-GREEN		= \033[1;32m
-YELLOW		= \033[1;33m
-BLUE		= \033[1;34m
-MAGENTA		= \033[1,35m
-CYAN		= \033[1;36m
-WHITE		= \033[1;0m
+LIBFILES_C	= $(CTYPE) $(STRING) $(MATH) $(SRC)
+#$(STRING)) $(MATH) $(SRC)
+LIBFILES_O	= $(CTYPE:.c=.o) $(STRING:.c=.o) $(MATH:.c=.o) $(SRC:.c=.o)
+      			
+all	:	$(NAME)
 
-#Chosen compiler as prescribed by WTC_
-CC		= gcc
+$(OBJ_DIR) :
+		@mkdir -p $(OBJ_DIR)
 
-#Compile flags as stipulated by 42.
-CCFLAG	= -Wall -Wextra -Werror
+#@ar rc $(NAME) $(addprefix$(OBJ_DIR), $(LIBFILES_O) 
 
-#Additional Compilation flags
-EXTRAS	= -c -I
-
-OUTPUT	= 	@echo	"$(GREEN)$(NAME) has been created."\
-			"$(BLUE)\nThis library is the intellectual property of"\
-			"$(CYAN)\nSIBONELO NKOSI (SINKOSI) & WETHINKCODE_ (NPC)$(WHITE)"\
-
-#This function only runs if the (OBJ) files exist and \
-	are updated at runtime.
 $(NAME)	:
-		$(CC) $(EXTRAS) $(CCFLAG) $(CTYPE) $(STRING) $(MATH) $(SRC)
-		ar rc $(NAME) $(OBJ_A) $(OBJ_B) $(OBJ_C) $(OBJ_D) libft.h 
-		ranlib $(NAME)
-		$(OUTPUT)
-
-all		: $(NAME)
-
-linux	:
-		clang $(EXTRAS) $(CCFLAG) $(CTYPE) $(STRING) $(MATH) $(SRC)
-		ar rc $(NAME) $(OBJ_A) $(OBJ_B) $(OBJ_C) $(OBJ_D) libft.h
-		ranlib $(NAME)
-		$(OUTPUT)
+	@$(CC) $(FLAGS) $(EXTRAS) $(INC_DIR) $(LIBFILES_C)
+	@ar rc $(NAME) $(LIBFILES_O) 
+	ranlib $(NAME)
+	$(OUTPUT)
 
 clean	:
-		rm -rf $(OBJ_A) $(OBJ_B) $(OBJ_C) $(OBJ_D) a.out
-		@echo "$(YELLOW)OBJECTS CLEANED & a.out HAS BEEN DELETED$(WHITE)"
+		@rm -rf $(OBJ_A) $(OBJ_B) $(OBJ_C) $(OBJ_D) a.out
+		@echo "$(YELLOW)OBJECTS CLEANED HAVE BEEN DELETED$(WHITE)"
 
 fclean	: clean
-		rm -rf $(NAME)
+		@rm -rf $(NAME)
 		@echo "$(RED)OBJECTS AND LIBFT.A HAVE BEEN CLEANED$(WHITE)"
 
 re		:fclean all
 
-rl		:fclean linux
-.PHONY: clean fclean all re
-#The above function ensures that the file is made even if \
-	the files already exist in the directory.
+.PHONY: all clean fclean re
