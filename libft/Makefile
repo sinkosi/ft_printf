@@ -182,16 +182,16 @@ $(OBJ_DIR) :
 $(NAME)	:
 	@$(CC) $(FLAGS) $(EXTRAS) $(INC_DIR) $(LIBFILES_C)
 	@ar rc $(NAME) $(LIBFILES_O) 
-	ranlib $(NAME)
+	@ranlib $(NAME)
 	$(OUTPUT)
 
 clean	:
 		@rm -rf $(OBJ_A) $(OBJ_B) $(OBJ_C) $(OBJ_D) a.out
-		@echo "$(YELLOW)OBJECTS CLEANED HAVE BEEN DELETED$(WHITE)"
+		@echo "$(YELLOW)OBJECTS HAVE BEEN CLEANED$(WHITE)"
 
 fclean	: clean
 		@rm -rf $(NAME)
-		@echo "$(RED)OBJECTS AND LIBFT.A HAVE BEEN CLEANED$(WHITE)"
+		@echo "$(RED)LIBFT.A HAS BEEN CLEANED FULLY FROM SYSTEM$(WHITE)"
 
 re		:fclean all
 

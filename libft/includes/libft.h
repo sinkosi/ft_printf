@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/17 09:57:48 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/07/22 11:22:43 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -789,6 +789,16 @@ char			*ft_strcapitalize(char *str);
 **		a base >= 2 and bases <= 16.
 */
 int				ft_numlen_base(int n, int base);
+
+/*
+** FT_FORLOOP - This function takes three parameters as argument and converts
+**		them to a for-loop type conversion using while loops. The for-loop
+**		takes the form: for(i= int a, a < int b, int c)
+**		'int a' is the starting point. Named as int begin.
+**		'int b' is the condition stop point. Named as int condition.
+**		'int c; is the step condition, if, '1' is equal to i++, '-1' is i--;.
+*/
+void			ft_forloop(int begin, int condition, int step);
 
 /*
 **FT_ITOA_BASE - This function converts an integer value to a null-terminated

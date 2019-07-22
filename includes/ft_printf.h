@@ -6,13 +6,13 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 10:51:35 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/19 16:19:11 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/07/22 11:15:21 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
-# include "../libft/libft.h"
+# include "../libft/includes/libft.h"
 # include <wchar.h>
 # include <stdio.h>
 
@@ -38,7 +38,7 @@
 
 typedef struct	s_printf
 {
-	char	*flags;
+	char	*format;
 	short	width;
 	short	precision_pointer;
 	short	size;
