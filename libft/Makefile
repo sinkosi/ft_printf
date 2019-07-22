@@ -13,11 +13,11 @@ OBJ_DIR		=	./obj/
 #########################
 #	COLOURS		#
 #########################
-NOC		= \033[0m
+NOC			= \033[0m
 BOLD		= \033[1m
 UNDERLINE	= \033[4m
 #BOLD ON
-RED		= \033[1;31m
+RED			= \033[1;31m
 GREEN		= \033[1;32m
 YELLOW		= \033[1;33m
 BLUE		= \033[1;34m

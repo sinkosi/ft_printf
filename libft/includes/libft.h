@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/22 11:22:43 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/07/22 11:45:05 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -798,7 +798,7 @@ int				ft_numlen_base(int n, int base);
 **		'int b' is the condition stop point. Named as int condition.
 **		'int c; is the step condition, if, '1' is equal to i++, '-1' is i--;.
 */
-void			ft_forloop(int begin, int condition, int step);
+void			ft_forloop(int *begin, int condition, int step, void (*f)(int));
 
 /*
 **FT_ITOA_BASE - This function converts an integer value to a null-terminated

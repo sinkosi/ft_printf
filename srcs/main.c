@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 11:17:44 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/22 10:51:09 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/07/22 11:35:55 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ int	main(int argc, char **argv)
 	ft_print_str("LIKE THIS\n", 1);
 	ft_printf("print a number\n");
 	printf("\n%10d", 123456789);
-	printf("\n%010d", 123);
+	printf("\n%010d\n", 123);
 	return (0);
 }

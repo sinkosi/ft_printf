@@ -4,7 +4,7 @@ time make -C libft/ fclean && time make -C libft/
 #clang  main.o get_next_line.o -I libft/includes -L libft/ -lft
 clang ./libft/libft.a ./srcs/main.c ./srcs/ft_convert.c ./srcs/ft_print_string.c ./srcs/ft_print_char.c ./srcs/ft_printf.c ./libft/includes/libft.h 
 make -C libft/ clean
-echo "\033[0;32mYOUR PROGRAM WILL START RUNNING SOON:\n**************************************\n"
+echo -e "\033[4;32mYOUR PROGRAM WILL START RUNNING SOON:\n**************************************\n"
 ./a.out
-echo "\n"
+#echo "\n"
 make -C libft/ fclean
