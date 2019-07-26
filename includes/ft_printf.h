@@ -45,7 +45,22 @@
 
 typedef struct	s_printf
 {
-	char	*format;
+	int	flag_minus;
+	int	flag_plus;
+	int	flag_space;
+	int	flag_hash;
+	int	flag_zero;
+	int	format_word;
+	int	f_return;
+	int	precision;
+
+	int	i;
+	int	h;
+	int	l;
+	int	j;
+	int	z;
+	char	convert;
+	/*char	*format;
 	short	width;
 	short	precision_pointer;
 	short	size;
@@ -55,7 +70,7 @@ typedef struct	s_printf
 	char	z;
 	char	ll;
 	char	j;
-	char	specifier;
+	char	specifier;*/
 }				t_printf;
 
 /*
@@ -107,11 +122,18 @@ typedef struct	s_printf
 **	"%s"	a string of characters
 **	"%u"	unsigned decimal (integer) number
 **	"%x"	number in hexadecimal (base 16)
+**	"%p"	pointer 
 **	"%%"	print a percent sign
 **	"\%"	print a percent sign
 */
 
 int				ft_printf(const char *format, ...);
+void			ft_flag_size(t_printf *my_printf, size_t str_size);
+void			ft_flag_width(t_printf *my_printf);
+void			ft_flag_precision(t_printf *my_printf, char *str);
+void			ft_flag_plus(t_printf *my_printf);
+void			ft_flag_hash(t_printf *my_printf, char *str);
+void			ft_flag_space(t_printf *my_printf);
 
 /*
 ** ************************************************************************	*
@@ -123,13 +145,15 @@ int				ft_printf(const char *format, ...);
 **	the input into ft_printf and handles the char and only the char leaving
 **	the string remainder on 0++;
 */
-int				ft_char_handler(t_printf *format, void *c);
-int				ft_str_handler(t_printf *format, void *s);
-int				ft_int_handler(t_printf *format, void *num);
-int				ft_unsigned_int_handler(t_printf *format, void *num);
-int				ft_hexadecimal_handler(t_printf *format, void *num);
-int				ft_octal_handler(t_printf *format, void *num);
-int				ft_pointer_handler(t_printf *format, void *num);
+void			ft_handler_c_char(t_printf *my_printf, va_list printf_list);
+void			ft_handler_d_int(t_printf *my_printf, va_list printf_list);
+void			ft_handler_e_exponent(t_printf *my_printf, va_list printf_list);
+void			ft_handler_f_float(t_printf *my_printf, va_list printf_list);
+void			ft_handler_o_octal(t_printf *my_printf, va_list printf_list);
+void			ft_handler_s_str(t_printf *my_printf, va_list printf_list);
+void			ft_handler_u_unsigned_int(t_printf *my_printf, va_list printf_list);
+void			ft_handler_x_hexadecimal(t_printf *my_printf, va_list printf_list);
+void			ft_handler_p_pointer(t_printf *my_printf, va_list printf_list);
 
 /*
 ** ************************************************************************	*
@@ -140,11 +164,22 @@ int				ft_pointer_handler(t_printf *format, void *num);
 ** ft_print_char - This function will print a char as given, or else it will
 **	print its 'wide_char' equivalent.
 */
-int				ft_print_char(int c);
-int				ft_print_str(char *str, int precision_point);
-int				ft_print_wchar(wchar_t c);
-int				ft_print_wstr(wchar_t *str, int precision_point);
-void			ft_print_width(int space);
-int				ft_convert(char **format, va_list printflst);
+void			ft_print_c_char(t_printf *my_printf, int c);
+void			ft_print_d_int(t_printf *my_printf, int n);
+void			ft_print_e_exponent(t_printf *my_printf, double n);
+void			ft_print_f_float(t_printf *my_printf, float n);
+void			ft_print_o_octal(t_printf *my_printf, unsigned int n);
+void			ft_print_s_str(t_printf *my_printf, char *str);
+void			ft_print_u_unsigned_int(t_printf *my_printf, unsigned int n);
+void			ft_print_x_hexadecimal(t_printf *my_printf, unsigned int n);
+void			ft_print_p_pointer(t_printf *my_printf, void *pointer);
+
+/*
+** ********************************************************************
+*/
+void			ft_print_out(t_printf *my_printf, char *str);
+void			ft_flag_check(t_printf *my_printf);
+void			ft_convert(t_printf *my_printf, va_list printf_list, char *str);
+void			ft_error(char *str);
 
 #endif

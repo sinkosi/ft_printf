@@ -12,9 +12,7 @@
 
 #include "../includes/ft_printf.h"
 
-int	ft_convert(char **format, va_list printflst)
+void	ft_convert(t_printf *my_printf, va_list printf_list, char *str)
 {
-	t_printf	str;
-
-	return (1);
+	
 }

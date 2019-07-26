@@ -26,7 +26,7 @@ int	main(int argc, char **argv)
 	ft_putendl(RED"THIS IS A TEST");
 	ft_putstr(RESET);
 	ft_putendl("CAN I UNDERLINE THIS");
-	ft_print_str("LIKE THIS\n", 1);
+	ft_printf("LIKE THIS\n");
 	ft_printf("print a number\n");
 	printf("\n%10d", 123456789);
 	printf("\n%010d\n", 123);

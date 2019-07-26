@@ -12,26 +12,26 @@
 
 #include "../includes/ft_printf.h"
 
-int	ft_printf(const char *format, ...)
+int	ft_printf(const char *parse_str, ...)
 {
-	int		i;
-	int		size;
-	va_list	printflst;
+	t_printf	my_printf;
+	va_list		printf_list;
+	char		*str;
 
-	i = 0;
-	size = 0;
-	va_start(printflst, format);
-	while (format[i] != '\0')
+	my_printf.i = 0;
+	my_printf.f_return = 0;
+	str = (char *)parse_str;
+	va_start(printf_list, parse_str);
+	while (parse_str[my_printf.i] != '\0')
 	{
-		if (format[i] != '%')
-			size += ft_print_char(format[i]);
-		else
+		if (parse_str[my_printf.i] == '%')
 		{
-			i++;
-			size += ft_convert(*format + i, printflst);
+			my_printf.i++;
+			ft_convert(&my_printf, printf_list, (char *)parse_str);
 		}
-		i++;
+		else
+			ft_print_out(&my_printf, (char *)parse_str);
 	}
-	va_end(printflst);
-	return (size);
+	va_end(printf_list);
+	return (my_printf.f_return);
 }
