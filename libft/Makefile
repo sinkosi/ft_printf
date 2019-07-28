@@ -1,50 +1,23 @@
-#########################
-#	LIBRARY NAME	#
-#########################
-NAME	= libft.a
+################################################################################
+#								LIBRARY
+################################################################################
+NAME := libft.a
+#LIBRARY NAME ^^^
+################################################################################
+#								DIRECTORIES
+################################################################################
+INC_DIR := includes
+#INCLUDES DIRECTORY ^^^
+SRC_DIR := srcs
+#SOURCES DIRECTORY ^^^
+OBJ_DIR := obj
+#OBJECTS DIRECTORY ^^^
+################################################################################
+#								FILES
+################################################################################
 
-#########################
-#	DIRECTORIES	#
-#########################
-INC_DIR		=	./includes/
-SRC_DIR		=	./srcs/
-OBJ_DIR		=	./obj/
-
-#########################
-#	COLOURS		#
-#########################
-NOC			= \033[0m
-BOLD		= \033[1m
-UNDERLINE	= \033[4m
-#BOLD ON
-RED			= \033[1;31m
-GREEN		= \033[1;32m
-YELLOW		= \033[1;33m
-BLUE		= \033[1;34m
-MAGENTA		= \033[1,35m
-CYAN		= \033[1;36m
-WHITE		= \033[1;0m
-
-#########################
-#	COMPILER	#
-#########################
-#Chosen compiler as prescribed by WTC_
-CC		= clang
-
-#Compile flags as stipulated by 42.
-CCFLAG	= -Wall -Wextra -Werror
-
-#Additional Compilation flags
-EXTRAS	= -c -I
-
-OUTPUT	= 	@echo	"$(GREEN)$(NAME) has been created."\
-			"$(BLUE)\nThis library is the intellectual property of"\
-			"$(CYAN)\nSIBONELO NKOSI (SINKOSI) & WETHINKCODE_ (NPC)$(WHITE)"\
-
-#########################
-#	FILES		#
-#########################
-CTYPE		=	ft_islower.c	\
+SRC :=	ft_atoi.c\
+	ft_islower.c	\
 			ft_isupper.c	\
 			ft_isalpha.c	\
 			ft_isdigit.c	\
@@ -70,8 +43,7 @@ CTYPE		=	ft_islower.c	\
 			ft_str_is_xnumeric.c	\
 			ft_str_is_alnum.c	\
 			ft_str_is_printable.c	\
-
-STRING		=	ft_memset.c		\
+			ft_memset.c		\
 		  ft_bzero.c		\
 		  ft_memalloc.c		\
 		  ft_memdel.c		\
@@ -106,11 +78,7 @@ STRING		=	ft_memset.c		\
 		  ft_strequ.c		\
   		  ft_strnequ.c		\
 		  ft_strreverse.c	\
-		  #ft_strspn.c		\
-		  ft_strcspn.c		\
-		  ft_strtok.c
-
-MATH		= 	ft_div_mod.c		\
+			ft_div_mod.c		\
 			ft_factorial.c		\
 			ft_fibonacci.c		\
 			ft_is_prime.c		\
@@ -121,8 +89,7 @@ MATH		= 	ft_div_mod.c		\
 			ft_vector.c		\
 			ft_fabs.c		\
 			ft_sine.c		\
-
-SRC		= ft_atoi.c			\
+			ft_atoi.c			\
   		  ft_striter.c		\
   		  ft_striteri.c		\
   		  ft_strmap.c		\
@@ -159,40 +126,66 @@ SRC		= ft_atoi.c			\
 		  ft_arraydup.c		\
 		  get_next_line.c	\
 		  ft_atoi_base.c	\
-#		  test.c		\
-#		  main.c			\
+#ADD SOURCE FILES HERE ^^^
+OBJ := $(addprefix $(OBJ_DIR)/, $(SRC:%.c=%.o))
+################################################################################
+#								COMPILER
+################################################################################
+CFLAGS := -Wall -Werror -Wextra
+#FLAGS^^^
+CC := clang $(CFLAGS)
+################################################################################
+#								RULES
+################################################################################
 
-#OBJ_A		=	$(addprefix$(OBJ_DIR), $(OFILE_A))
-OBJ_A		=	$(CTYPE:.c=.o)
-OBJ_B		=	$(STRING:.c=.o)
-OBJ_C		=	$(MATH:.c=.o)
-OBJ_D		=	$(SRC:.c=.o)
+all: $(NAME)
 
-LIBFILES_C	= $(CTYPE) $(STRING) $(MATH) $(SRC)
-#$(STRING)) $(MATH) $(SRC)
-LIBFILES_O	= $(CTYPE:.c=.o) $(STRING:.c=.o) $(MATH:.c=.o) $(SRC:.c=.o)
-      			
-all	:	$(NAME)
-
-$(OBJ_DIR) :
-		@mkdir -p $(OBJ_DIR)
-
-#@ar rc $(NAME) $(addprefix$(OBJ_DIR), $(LIBFILES_O) 
-
-$(NAME)	:
-	@$(CC) $(FLAGS) $(EXTRAS) $(INC_DIR) $(LIBFILES_C)
-	@ar rc $(NAME) $(LIBFILES_O) 
+$(NAME): $(OBJ)
+	$(START)
+	@ar rcs $(NAME) $(OBJ)
 	@ranlib $(NAME)
 	$(OUTPUT)
 
-clean	:
-		@rm -rf $(OBJ_A) $(OBJ_B) $(OBJ_C) $(OBJ_D) a.out
-		@echo "$(YELLOW)OBJECTS HAVE BEEN CLEANED$(WHITE)"
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+	@mkdir -p $(OBJ_DIR)
+	@$(CC) -I $(INC_DIR) -o $@ -c $<
 
-fclean	: clean
-		@rm -rf $(NAME)
-		@echo "$(RED)LIBFT.A HAS BEEN CLEANED FULLY FROM SYSTEM$(WHITE)"
+clean:
+	@rm -rf $(OBJ_DIR)
+	@echo "$(YELLOW)OBJECTS CLEANED HAVE BEEN DELETED$(WHITE)"
 
-re		:fclean all
+fclean: clean
+	@rm -f $(NAME) a.out
+	@echo "$(RED)OBJECTS AND LIBFT.A HAVE BEEN CLEANED$(WHITE)"
 
-.PHONY: all clean fclean re
+re: fclean all
+
+################################################################################
+#								ADDITIONAL STUFF
+################################################################################
+
+.PHONY := all clean fclean re
+#PHONY^^^
+
+###############################################################################
+#COLOURS
+################################
+NOC		= \033[0m
+BOLD		= \033[1m
+UNDERLINE	= \033[4m
+#COLOUR LIST BELOW WITH BOLD ON
+RED		= \033[1;31m
+GREEN		= \033[1;32m
+YELLOW		= \033[1;33m
+BLUE		= \033[1;34m
+MAGENTA		= \033[1,35m
+CYAN		= \033[1;36m
+WHITE		= \033[1;0m
+
+################################################################################
+OUTPUT	= 	@echo	"$(GREEN)$(NAME) has been created."\
+			"$(BLUE)\nThis library is the intellectual property of"\
+			"$(CYAN)\nSIBONELO NKOSI (SINKOSI) & WETHINKCODE_ (NPC)$(WHITE)"\
+
+START	=	@echo "$(GREEN)BUILDING LIBFT LIBRARY$(WHITE)"\
+		"$(BLUE)PLEASE BE PATIENT$(WHITE)"

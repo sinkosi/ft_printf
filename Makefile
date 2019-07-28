@@ -1,3 +1,6 @@
+#################################
+#	NAME			#
+#################################
 NAME	= libftprintf.a
 
 #########################
@@ -24,10 +27,14 @@ OUTPUT	= 	@echo	"$(GREEN)$(NAME) has been created."\
 #########################
 LIBFT_A		= libft.a
 
+INC_PATH	= includes/
 SRCS_PATH	= srcs/
 OBJ_PATH	= obj/
 LIBFT_PATH	= ./libft/
 
+#############################################
+#	COMPILER
+######################################
 CC		= gcc
 CC1		= clang
 FLAGS		= -Wall -Werror -Wextra
@@ -37,48 +44,69 @@ FLAGS		= -Wall -Werror -Wextra
 #########################
 
 FTPRINTF_H	= -I ./includes/
-LIBFT_H		= -I ./$(LIBFT_PATH)
+LIBFT_H		= -I ./$(LIBFT_PATH)/includes/
 
-SRCS_NAME	= ft_convert.c\
-		  ft_print_char.c\
-		  ft_printf.c\
-		  ft_print_string.c\
-#		  main.c
+#################################
+#	FILES			#
+#################################
+SRCS_NAME	= ft_convert.c		\
+		  ft_exit.c		\
+		  ft_flag_check.c	\
+		  ft_flag_hash.c	\
+		  ft_flag_minus.c	\
+		  ft_flag_plus.c	\
+		  ft_flag_space.c	\
+		  ft_flag_width.c	\
+		  ft_handler_c_char.c	\
+		  ft_handler_d_int.c	\
+		  ft_handler_o_octal.c	\
+		  ft_handler_p_pointer.c\
+		  ft_handler_s_str.c	\
+		  ft_handler_u_unsigned_int.c	\
+		  ft_handler_x_hexadecimal.c	\
+		  ft_print_c_char.c	\
+		  ft_print_d_int.c	\
+		  ft_printf.c		\
+		  ft_print_mod.c	\
+		  ft_print_o_octal.c	\
+		  ft_print_out.c	\
+		  ft_print_p_pointer.c	\
+		  ft_print_s_str.c	\
+		  ft_print_u_unsigned_int.c	\
+		  ft_print_x_hexadecimal.c	\
 
-SRCS		= $(addprefix $(SRCS_PATH), $(SRCS_NAME))
-OBJ		= $(SRCS_NAME:.c=.o)
-CFIND		= $(SRCS_NAME:%=$(SRC_PATH)%)
-OFILE		= $(SRCS_NAME:%.c=%.o)
-OBJ		= $(addprefix $(OBJ_PATH), $(OFILE))
-all:	$(OBJ_DIR) $(NAME)
+OBJ		= $(addprefix $(OBJ_PATH)/, $(SRCS_NAME:%.c=%.o))
+################################################
+#	LIBRARIES
+###############################################
 
-$(OBJ_DIR)	:
-	@mkdir	-p $(OBJ_PATH)
-	@echo "$(MAGENTA)$(OBJ_PATH) has been created for .o files$(WHITE)"
+LIBFT		= $(LIBFT_PATH) -lft
 
-#ADD YOUR FLAGS BAG IN
-$(NAME)	:	$(OBJ)
-		@make -C $(LIBFT_PATH)
-		@cp $(LIBFT_PATH) $(LIBFT_A) .
-		@mv $(LIBFT_A) $(NAME)
-		@ar rc $(NAME) $(addprefix(OBJ_PATH), $(OFILE))
+##############################################
+#	MAKE RULES
+############################################
+
+all:	$(NAME)
+
+$(NAME):	$(OBJ)
+		@make all -C $(LIBFT_PATH)/
+		@#cp $(LIBFT_PATH) $(LIBFT_A) .
+		@#mv $(LIBFT_A) $(NAME)
+		@ar rc $(NAME) $(OBJ) $(LIBFT_PATH)/obj/*.o
 		@ranlib $(NAME)
 		$(OUTPUT)
 
-$(OBJ)	:	$(CFIND)
-	@$(MAKE) $(OFILE)
-
-$(OFILE) :
-	@$(CC1) -c -o $(OBJ_PATH) $@ $(SRC_PATH) $(@:%.o=%.c)
+$(OBJ_PATH)/%.o: $(SRCS_PATH)/%.c
+	@mkdir	-p $(OBJ_PATH)
+	@$(CC1) -I $(INC_PATH) -o $@ -c $<
 
 clean	:
 	@make -C $(LIBFT_PATH)/ clean
-	@/bin/rm -rf $(OBJ)
+	@/bin/rm -rf $(OBJ_PATH)
 
 fclean	: clean
 	@make -C $(LIBFT_PATH)/ fclean
 	@/bin/rm -rf $(NAME)
-	#rm a.out
 
 re:	fclean all
 
