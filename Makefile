@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/07/28 10:05:49 by sinkosi           #+#    #+#              #
+#    Updated: 2019/07/28 11:52:02 by sinkosi          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 #################################
 #	NAME			#
 #################################
@@ -53,9 +65,11 @@ SRCS_NAME	= ft_convert.c		\
 		  ft_exit.c		\
 		  ft_flag_check.c	\
 		  ft_flag_hash.c	\
-		  ft_flag_minus.c	\
 		  ft_flag_plus.c	\
+		  ft_flag_reset.c	\
 		  ft_flag_space.c	\
+		  ft_flag_set.c		\
+		  ft_flag_size.c	\
 		  ft_flag_width.c	\
 		  ft_handler_c_char.c	\
 		  ft_handler_d_int.c	\
@@ -64,6 +78,8 @@ SRCS_NAME	= ft_convert.c		\
 		  ft_handler_s_str.c	\
 		  ft_handler_u_unsigned_int.c	\
 		  ft_handler_x_hexadecimal.c	\
+		  ft_handler_x_hexadecimal2.c	\
+		  ft_handler_convert.c			\
 		  ft_print_c_char.c	\
 		  ft_print_d_int.c	\
 		  ft_printf.c		\
@@ -74,6 +90,7 @@ SRCS_NAME	= ft_convert.c		\
 		  ft_print_s_str.c	\
 		  ft_print_u_unsigned_int.c	\
 		  ft_print_x_hexadecimal.c	\
+		  ft_print_x_hexadecimal2.c	
 
 OBJ		= $(addprefix $(OBJ_PATH)/, $(SRCS_NAME:%.c=%.o))
 ################################################

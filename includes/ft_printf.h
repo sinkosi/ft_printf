@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 10:51:35 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/22 14:10:59 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/07/28 11:41:05 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@
 ** ************************************************************************	*
 */
 # define UINT_MAX 4294967295
+# define FLAGS "hljz#0-+ ."
+# define PARSE "cCdDioOpsSuUxX\%"
 
 /*
 ** ************************************************************************ *
@@ -45,32 +47,34 @@
 
 typedef struct	s_printf
 {
-	int	flag_minus;
-	int	flag_plus;
-	int	flag_space;
-	int	flag_hash;
-	int	flag_zero;
-	int	format_word;
-	int	f_return;
-	int	precision;
+	int			flag_minus;
+	int			flag_plus;
+	int			flag_space;
+	int			flag_hash;
+	int			flag_zero;
+	int			format_word;
+	int			f_return;
+	int			precision;
 
-	int	i;
-	int	h;
-	int	l;
-	int	j;
-	int	z;
-	char	convert;
-	/*char	*format;
-	short	width;
-	short	precision_pointer;
-	short	size;
-	char	hh;
-	char	h;
-	char	l;
-	char	z;
-	char	ll;
-	char	j;
-	char	specifier;*/
+	int			i;
+	int			h;
+	int			l;
+	int			j;
+	int			z;
+	char		convert;
+/*
+**	char	*format;
+**	short	width;
+**	short	precision_pointer;
+**	short	size;
+**	char	hh;
+**	char	h;
+**	char	l;
+**	char	z;
+**	char	ll;
+**	char	j;
+**	char	specifier;
+*/
 }				t_printf;
 
 /*
@@ -122,7 +126,7 @@ typedef struct	s_printf
 **	"%s"	a string of characters
 **	"%u"	unsigned decimal (integer) number
 **	"%x"	number in hexadecimal (base 16)
-**	"%p"	pointer 
+**	"%p"	pointer
 **	"%%"	print a percent sign
 **	"\%"	print a percent sign
 */
@@ -151,9 +155,14 @@ void			ft_handler_e_exponent(t_printf *my_printf, va_list printf_list);
 void			ft_handler_f_float(t_printf *my_printf, va_list printf_list);
 void			ft_handler_o_octal(t_printf *my_printf, va_list printf_list);
 void			ft_handler_s_str(t_printf *my_printf, va_list printf_list);
-void			ft_handler_u_unsigned_int(t_printf *my_printf, va_list printf_list);
-void			ft_handler_x_hexadecimal(t_printf *my_printf, va_list printf_list);
+void			ft_handler_u_unsigned_int(t_printf *my_printf,
+		va_list printf_list);
+void			ft_handler_x_hexadecimal(t_printf *my_printf,
+		va_list printf_list);
+void			ft_handler_x_hexadecimal2(t_printf *my_printf,
+		va_list printf_list);
 void			ft_handler_p_pointer(t_printf *my_printf, va_list printf_list);
+void			ft_handler_convert(t_printf *my_printf, va_list printf_list);
 
 /*
 ** ************************************************************************	*
@@ -172,7 +181,9 @@ void			ft_print_o_octal(t_printf *my_printf, unsigned int n);
 void			ft_print_s_str(t_printf *my_printf, char *str);
 void			ft_print_u_unsigned_int(t_printf *my_printf, unsigned int n);
 void			ft_print_x_hexadecimal(t_printf *my_printf, unsigned int n);
+void			ft_print_x_hexadecimal2(t_printf *my_printf, unsigned int n);
 void			ft_print_p_pointer(t_printf *my_printf, void *pointer);
+void			ft_print_mod(t_printf *my_printf);
 
 /*
 ** ********************************************************************
@@ -180,6 +191,8 @@ void			ft_print_p_pointer(t_printf *my_printf, void *pointer);
 void			ft_print_out(t_printf *my_printf, char *str);
 void			ft_flag_check(t_printf *my_printf);
 void			ft_convert(t_printf *my_printf, va_list printf_list, char *str);
+void			ft_flag_set(t_printf *my_printf, char *str);
+void			ft_flag_reset(t_printf *my_printf);
 void			ft_error(char *str);
 
 #endif

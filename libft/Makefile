@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/07/28 10:06:06 by sinkosi           #+#    #+#              #
+#    Updated: 2019/07/28 10:33:21 by sinkosi          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 ################################################################################
 #								LIBRARY
 ################################################################################
@@ -7,17 +19,14 @@ NAME := libft.a
 #								DIRECTORIES
 ################################################################################
 INC_DIR := includes
-#INCLUDES DIRECTORY ^^^
 SRC_DIR := srcs
-#SOURCES DIRECTORY ^^^
 OBJ_DIR := obj
 #OBJECTS DIRECTORY ^^^
 ################################################################################
 #								FILES
 ################################################################################
 
-SRC :=	ft_atoi.c\
-	ft_islower.c	\
+SRC :=		ft_islower.c	\
 			ft_isupper.c	\
 			ft_isalpha.c	\
 			ft_isdigit.c	\
@@ -30,20 +39,20 @@ SRC :=	ft_atoi.c\
 			ft_iscntrl.c	\
 			ft_isprint.c	\
 			ft_isxdigit.c	\
-			ft_isimax.c	\
-			ft_isimin.c	\
+			ft_isimax.c		\
+			ft_isimin.c		\
 			ft_toupper.c	\
 			ft_tolower.c	\
-			ft_tochar.c	\
-			ft_tostr.c	\
+			ft_tochar.c		\
+			ft_tostr.c		\
 			ft_str_is_lowercase.c	\
 			ft_str_is_uppercase.c	\
-			ft_str_is_alpha.c	\
-			ft_str_is_numeric.c	\
+			ft_str_is_alpha.c		\
+			ft_str_is_numeric.c		\
 			ft_str_is_xnumeric.c	\
-			ft_str_is_alnum.c	\
+			ft_str_is_alnum.c		\
 			ft_str_is_printable.c	\
-			ft_memset.c		\
+		  ft_memset.c		\
 		  ft_bzero.c		\
 		  ft_memalloc.c		\
 		  ft_memdel.c		\
@@ -62,6 +71,7 @@ SRC :=	ft_atoi.c\
 		  ft_strchr.c		\
 		  ft_strrchr.c		\
 		  ft_strlchr.c		\
+		  ft_strchr_bool.c	\
 		  ft_strstr.c		\
 		  ft_strnstr.c		\
 		  ft_strlstr.c		\
@@ -82,14 +92,14 @@ SRC :=	ft_atoi.c\
 			ft_factorial.c		\
 			ft_fibonacci.c		\
 			ft_is_prime.c		\
-			ft_find_next_prime.c	\
-			ft_power.c		\
-			ft_sqrt.c		\
-			ft_ultimate_div_mod.c	\
-			ft_vector.c		\
-			ft_fabs.c		\
-			ft_sine.c		\
-			ft_atoi.c			\
+			ft_find_next_prime.c\
+			ft_power.c			\
+			ft_sqrt.c			\
+			ft_ultimate_div_mod.c\
+			ft_vector.c			\
+			ft_fabs.c			\
+			ft_sine.c			\
+		  ft_atoi.c			\
   		  ft_striter.c		\
   		  ft_striteri.c		\
   		  ft_strmap.c		\
@@ -97,10 +107,10 @@ SRC :=	ft_atoi.c\
 		  ft_strsub.c		\
 		  ft_strjoin.c		\
 		  ft_strtrim.c		\
-		  ft_strtrim_delim.c	\
+		  ft_strtrim_delim.c\
 		  ft_strsplit.c		\
 		  ft_numlen.c		\
-		  ft_itoa.c		\
+		  ft_itoa.c			\
 		  ft_putchar.c		\
 		  ft_putstr.c		\
 		  ft_putendl.c		\
@@ -118,7 +128,7 @@ SRC :=	ft_atoi.c\
 		  ft_strlowcase.c	\
 		  ft_strupcase.c	\
 		  ft_strcapitalize.c	\
-		  ft_swap.c		\
+		  ft_swap.c			\
 		  ft_numlen_base.c	\
 		  ft_itoa_base.c	\
 		  ft_putnbr_base.c	\
@@ -152,7 +162,7 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 
 clean:
 	@rm -rf $(OBJ_DIR)
-	@echo "$(YELLOW)OBJECTS CLEANED HAVE BEEN DELETED$(WHITE)"
+	@echo "$(YELLOW)$(NAME) OBJECTS CLEANED HAVE BEEN DELETED$(WHITE)"
 
 fclean: clean
 	@rm -f $(NAME) a.out

@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/17 11:34:58 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/22 11:45:05 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/07/28 10:36:35 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -459,6 +459,13 @@ char			*ft_strrchr(const char *s, int c);
 **	occurrence of c in the string s.
 */
 long			ft_strlchr(const char *s, int c);
+
+/*
+** FT_STRCHR_BOOL - This function locates the occurence of c int the string
+**		pointed to by s. The function returns a '1' if the char c is found
+**		and 0 if it is not found.
+*/
+int				ft_strchr_bool(const char *s, int c);
 
 /*
 ** FT_STRSTR - This function locates the first occurrence of the null-
