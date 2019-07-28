@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 09:42:53 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/28 09:42:54 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/07/28 15:00:42 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	ft_flag_check(t_printf *my_printf)
 	char *err1;
 	char *err2;
 
-	err1 = ("\nERROR: Reoccuring Flags");
-	err2 = ("\nERROR: Conflicting Flags");
+	err1 = ("\nERROR: FLAG ERROR");
+	err2 = ("\nERROR: CONFLICT DETECTED");
 	if (my_printf->h > 2 || my_printf->l > 2 || my_printf->j > 1
 			|| my_printf->z > 1 || my_printf->flag_hash > 1
 			|| my_printf->flag_zero > 1 || my_printf->flag_minus > 1

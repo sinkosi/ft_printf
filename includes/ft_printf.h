@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 10:51:35 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/28 11:41:05 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/07/28 13:57:11 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,26 +55,13 @@ typedef struct	s_printf
 	int			format_word;
 	int			f_return;
 	int			precision;
-
+	int			prec_len;
 	int			i;
 	int			h;
 	int			l;
 	int			j;
 	int			z;
 	char		convert;
-/*
-**	char	*format;
-**	short	width;
-**	short	precision_pointer;
-**	short	size;
-**	char	hh;
-**	char	h;
-**	char	l;
-**	char	z;
-**	char	ll;
-**	char	j;
-**	char	specifier;
-*/
 }				t_printf;
 
 /*
@@ -191,6 +178,7 @@ void			ft_print_mod(t_printf *my_printf);
 void			ft_print_out(t_printf *my_printf, char *str);
 void			ft_flag_check(t_printf *my_printf);
 void			ft_convert(t_printf *my_printf, va_list printf_list, char *str);
+void			ft_flag_precision(t_printf *my_printf, char *str);
 void			ft_flag_set(t_printf *my_printf, char *str);
 void			ft_flag_reset(t_printf *my_printf);
 void			ft_error(char *str);

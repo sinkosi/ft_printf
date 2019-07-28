@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 16:19:44 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/19 16:20:53 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/07/28 15:09:25 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,9 @@ int	ft_printf(const char *parse_str, ...)
 {
 	t_printf	my_printf;
 	va_list		printf_list;
-	char		*str;
 
 	my_printf.i = 0;
 	my_printf.f_return = 0;
-	str = (char *)parse_str;
 	va_start(printf_list, parse_str);
 	while (parse_str[my_printf.i] != '\0')
 	{
