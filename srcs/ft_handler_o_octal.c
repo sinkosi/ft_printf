@@ -34,7 +34,7 @@ void		ft_handler_o_octal(t_printf *my_printf, va_list printf_list)
 	else if (my_printf->l == 2)
 		ft_print_o_octal(my_printf, va_arg(printf_list, unsigned long long));
 	else if (my_printf->j == 1)
-		ft_print_o_octal(my_printf, va_arg(printf_list, uintmax_t));
+		ft_print_o_octal(my_printf, va_arg(printf_list, __uintmax_t));
 	else if (my_printf->z == 1)
 		ft_print_o_octal(my_printf, va_arg(printf_list, size_t));
 	else
