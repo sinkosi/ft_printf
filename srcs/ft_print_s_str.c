@@ -14,9 +14,9 @@
 
 void	ft_print_s_str(t_printf *my_printf, char *str)
 {
-	char	*null;
+	char	*nullstr;
 
-	null = "(null)";
+	nullstr = "(null)";
 	if (str != NULL)
 	{
 		ft_flag_size(my_printf, ft_strlen(str));
@@ -28,11 +28,11 @@ void	ft_print_s_str(t_printf *my_printf, char *str)
 	}
 	else
 	{
-		ft_flag_size(my_printf, ft_strlen(null));
+		ft_flag_size(my_printf, ft_strlen(nullstr));
 		ft_flag_width(my_printf);
-		ft_flag_precision(my_printf, null);
-		ft_putstr(null);
-		my_printf->f_return += ft_strlen(null);
+		ft_flag_precision(my_printf, nullstr);
+		ft_putstr(nullstr);
+		my_printf->f_return += ft_strlen(nullstr);
 		ft_flag_width(my_printf);
 	}
 }

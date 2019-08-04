@@ -12,6 +12,11 @@
 
 #include "../includes/ft_printf.h"
 
+static void	ft_handler_d_char(t_printf *my_printf, char c)
+{
+	ft_print_d_int(my_printf, c);
+}
+
 void	ft_handler_d_int(t_printf *my_printf, va_list printf_list)
 {
 	ft_flag_check(my_printf);

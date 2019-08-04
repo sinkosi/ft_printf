@@ -24,8 +24,8 @@ void	ft_convert(t_printf *my_printf, va_list printf_list, char *str)
 	}
 	if (ft_strchr_bool(PARSE, str[my_printf->i]))
 	{
-		my_printf->i += 1;
-		my_printf->convert = str[my_printf->i];
+		//my_printf->i += 1;
+		my_printf->convert = str[my_printf->i++];
 		ft_handler_convert(my_printf, printf_list);
 	}
 	else

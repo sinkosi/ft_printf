@@ -12,7 +12,7 @@
 
 #include "../includes/ft_printf.h"
 
-void	ft_print_u_unsigned_int(t_printf *my_printf, unsigned int n)
+void	ft_print_u_unsigned_int(t_printf *my_printf, unsigned long long n)
 {
 	char	*str;
 

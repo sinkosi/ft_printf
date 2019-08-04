@@ -12,7 +12,7 @@
 
 #include "../includes/ft_printf.h"
 
-void	ft_print_d_int(t_printf *my_printf, int n)
+void	ft_print_d_int(t_printf *my_printf, __intmax_t n)
 {
 	char	*str;
 

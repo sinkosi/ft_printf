@@ -25,7 +25,7 @@ void	ft_handler_convert(t_printf *my_printf, va_list printf_list)
 	else if (my_printf->convert == 'x')
 		ft_handler_x_hexadecimal(my_printf, printf_list);
 	else if (my_printf->convert == 'X')
-		ft_handler_x_hexadecimal2(my_printf, printf_list);
+		ft_handler_xc_hexadecimal(my_printf, printf_list);
 	else if (my_printf->convert == 'p')
 		ft_handler_p_pointer(my_printf, printf_list);
 	else if (my_printf->convert == 's')

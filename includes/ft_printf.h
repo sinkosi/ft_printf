@@ -62,6 +62,7 @@ typedef struct	s_printf
 	int			j;
 	int			z;
 	char		convert;
+	//More definitions on https://linux.die.net/man/3/vfprintf
 }				t_printf;
 
 /*
@@ -118,8 +119,19 @@ typedef struct	s_printf
 **	"\%"	print a percent sign
 */
 
-int				ft_printf(const char *format, ...);
+/*
+** ************************************************************************	*
+**									FLAG FUNCTIONS							*
+** ************************************************************************	*
+*/
+/*
+** FT_FLAG_SIZE - 
+*/
 void			ft_flag_size(t_printf *my_printf, size_t str_size);
+
+/*
+** FT_FLAG_WIDTH - 
+*/
 void			ft_flag_width(t_printf *my_printf);
 void			ft_flag_precision(t_printf *my_printf, char *str);
 void			ft_flag_plus(t_printf *my_printf);
@@ -146,7 +158,7 @@ void			ft_handler_u_unsigned_int(t_printf *my_printf,
 		va_list printf_list);
 void			ft_handler_x_hexadecimal(t_printf *my_printf,
 		va_list printf_list);
-void			ft_handler_x_hexadecimal2(t_printf *my_printf,
+void			ft_handler_xc_hexadecimal(t_printf *my_printf,
 		va_list printf_list);
 void			ft_handler_p_pointer(t_printf *my_printf, va_list printf_list);
 void			ft_handler_convert(t_printf *my_printf, va_list printf_list);
@@ -161,14 +173,14 @@ void			ft_handler_convert(t_printf *my_printf, va_list printf_list);
 **	print its 'wide_char' equivalent.
 */
 void			ft_print_c_char(t_printf *my_printf, int c);
-void			ft_print_d_int(t_printf *my_printf, int n);
+void			ft_print_d_int(t_printf *my_printf, __intmax_t n);
 void			ft_print_e_exponent(t_printf *my_printf, double n);
 void			ft_print_f_float(t_printf *my_printf, float n);
-void			ft_print_o_octal(t_printf *my_printf, unsigned int n);
+void			ft_print_o_octal(t_printf *my_printf, unsigned long long n);
 void			ft_print_s_str(t_printf *my_printf, char *str);
-void			ft_print_u_unsigned_int(t_printf *my_printf, unsigned int n);
-void			ft_print_x_hexadecimal(t_printf *my_printf, unsigned int n);
-void			ft_print_x_hexadecimal2(t_printf *my_printf, unsigned int n);
+void			ft_print_u_unsigned_int(t_printf *my_printf, unsigned long long n);
+void			ft_print_x_hexadecimal(t_printf *my_printf, unsigned long long n);
+void			ft_print_xc_hexadecimal(t_printf *my_printf, unsigned long long n);
 void			ft_print_p_pointer(t_printf *my_printf, void *pointer);
 void			ft_print_mod(t_printf *my_printf);
 
@@ -176,6 +188,7 @@ void			ft_print_mod(t_printf *my_printf);
 ** ********************************************************************
 */
 void			ft_print_out(t_printf *my_printf, char *str);
+int				ft_printf(const char *format, ...);
 void			ft_flag_check(t_printf *my_printf);
 void			ft_convert(t_printf *my_printf, va_list printf_list, char *str);
 void			ft_flag_precision(t_printf *my_printf, char *str);

@@ -18,7 +18,7 @@ void	ft_flag_plus(t_printf *my_printf)
 		ft_putchar('-');
 	else if (my_printf->flag_plus == 1)
 		ft_putchar('+');
-	if (my_printf->flag_plus == 1 || my_printf->flag_plus == 1)
+	if (my_printf->flag_plus == -1 || my_printf->flag_plus == 1)
 		my_printf->f_return++;
 	if (my_printf->flag_zero == 1 && my_printf->flag_plus != 0)
 		my_printf->flag_plus = 2;

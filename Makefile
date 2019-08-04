@@ -40,7 +40,7 @@ OUTPUT	= 	@echo	"$(GREEN)$(NAME) has been created."\
 LIBFT_A		= libft.a
 
 INC_PATH	= includes/
-SRCS_PATH	= srcs/
+SRCS_PATH	= srcs
 OBJ_PATH	= obj/
 LIBFT_PATH	= ./libft/
 

@@ -19,7 +19,7 @@ int	ft_printf(const char *parse_str, ...)
 
 	my_printf.i = 0;
 	my_printf.f_return = 0;
-	va_start(printf_list, parse_str);
+	va_start(printf_list, (char *)parse_str);
 	while (parse_str[my_printf.i] != '\0')
 	{
 		if (parse_str[my_printf.i] == '%')

@@ -14,15 +14,15 @@
 
 static void	ft_handler_x_short(t_printf *my_printf, unsigned short n)
 {
-	ft_print_x_hexadecimal2(my_printf, n);
+	ft_print_xc_hexadecimal(my_printf, n);
 }
 
 static void	ft_handler_x_char(t_printf *my_printf, unsigned char c)
 {
-	ft_print_x_hexadecimal2(my_printf, c);
+	ft_print_xc_hexadecimal(my_printf, c);
 }
 
-void		ft_handler_x_hexadecimal2(t_printf *my_printf, va_list printf_list)
+void		ft_handler_xc_hexadecimal(t_printf *my_printf, va_list printf_list)
 {
 	ft_flag_check(my_printf);
 	if (my_printf->h == 1)
@@ -30,14 +30,14 @@ void		ft_handler_x_hexadecimal2(t_printf *my_printf, va_list printf_list)
 	else if (my_printf->h == 2)
 		ft_handler_x_char(my_printf, va_arg(printf_list, unsigned int));
 	else if (my_printf->l == 1)
-		ft_print_x_hexadecimal2(my_printf, va_arg(printf_list, unsigned long));
+		ft_print_xc_hexadecimal(my_printf, va_arg(printf_list, unsigned long));
 	else if (my_printf->l == 2)
-		ft_print_x_hexadecimal2(my_printf,
+		ft_print_xc_hexadecimal(my_printf,
 				va_arg(printf_list, unsigned long long));
 	else if (my_printf->j == 1)
-		ft_print_x_hexadecimal2(my_printf, va_arg(printf_list, __uintmax_t));
+		ft_print_xc_hexadecimal(my_printf, va_arg(printf_list, __uintmax_t));
 	else if (my_printf->z == 1)
-		ft_print_x_hexadecimal2(my_printf, va_arg(printf_list, size_t));
+		ft_print_xc_hexadecimal(my_printf, va_arg(printf_list, size_t));
 	else
-		ft_print_x_hexadecimal2(my_printf, va_arg(printf_list, unsigned int));
+		ft_print_xc_hexadecimal(my_printf, va_arg(printf_list, unsigned int));
 }
