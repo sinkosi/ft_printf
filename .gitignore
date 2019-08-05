@@ -1,4 +1,4 @@
-# Compiled source #
+gi# Compiled source #
 ###################
 *.com
 *.class
@@ -39,3 +39,8 @@ ehthumbs.db
 Thumbs.db
 a.out
 *.gch
+.idea/workspace.xml
+.vscode/launch.json
+.vscode/tasks.json
+a.out.dSYM/Contents/Info.plist
+cmake-build-debug/CMakeFiles/clion-log.txt
