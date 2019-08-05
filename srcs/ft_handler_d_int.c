@@ -29,7 +29,7 @@ void	ft_handler_d_int(t_printf *my_printf, va_list printf_list)
 	else if (my_printf->l == 2)
 		ft_print_d_int(my_printf, va_arg(printf_list, long long));
 	else if (my_printf->j == 1)
-		ft_print_d_int(my_printf, va_arg(printf_list, __intmax_t));
+		ft_print_d_int(my_printf, va_arg(printf_list, intmax_t));
 	else if (my_printf->z == 1)
 		ft_print_d_int(my_printf, va_arg(printf_list, size_t));
 	else

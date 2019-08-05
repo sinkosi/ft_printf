@@ -48,6 +48,7 @@ int main()
   char my_string[] = "Pardon me, may I borrow your nose?";
 
   ft_printf ("Integer: %d\n", my_integer);
+  printf ("Integer: %d\n", my_integer);
   ft_printf ("Unsigned integer: %u\n", my_ui);
 
   ft_printf ("The same, as hexadecimal: %#x %#x\n", my_integer, my_ui);

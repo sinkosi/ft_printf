@@ -35,7 +35,7 @@ void		ft_handler_xc_hexadecimal(t_printf *my_printf, va_list printf_list)
 		ft_print_xc_hexadecimal(my_printf,
 				va_arg(printf_list, unsigned long long));
 	else if (my_printf->j == 1)
-		ft_print_xc_hexadecimal(my_printf, va_arg(printf_list, __uintmax_t));
+		ft_print_xc_hexadecimal(my_printf, va_arg(printf_list, uintmax_t));
 	else if (my_printf->z == 1)
 		ft_print_xc_hexadecimal(my_printf, va_arg(printf_list, size_t));
 	else

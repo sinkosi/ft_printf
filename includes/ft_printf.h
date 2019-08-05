@@ -173,7 +173,7 @@ void			ft_handler_convert(t_printf *my_printf, va_list printf_list);
 **	print its 'wide_char' equivalent.
 */
 void			ft_print_c_char(t_printf *my_printf, int c);
-void			ft_print_d_int(t_printf *my_printf, __intmax_t n);
+void			ft_print_d_int(t_printf *my_printf, intmax_t n);
 void			ft_print_e_exponent(t_printf *my_printf, double n);
 void			ft_print_f_float(t_printf *my_printf, float n);
 void			ft_print_o_octal(t_printf *my_printf, unsigned long long n);
