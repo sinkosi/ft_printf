@@ -12,7 +12,7 @@
 
 #include "../includes/ft_printf.h"
 
-int	ft_printf(const char *parse_str, ...)
+int	ft_printf(const char *parse_str, ... )
 {
 	t_printf	my_printf;
 	va_list		printf_list;
