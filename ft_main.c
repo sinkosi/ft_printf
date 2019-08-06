@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 11:17:44 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/29 15:09:13 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/08/06 16:25:40 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,14 @@ printf("Le fichier{CYAN}%s{eoc} contien : {RED}%s{eoc}", filename, str);
 int main()
 {
   int my_integer = -42;
-  unsigned int my_ui = 23;
+/*  unsigned int my_ui = 23;
   float my_float = 3.56;
   double my_double = 424242.171717;
   char my_char = 'w';
   char my_string[] = "Pardon me, may I borrow your nose?";
-
+*/
   ft_printf ("Integer: %d\n", my_integer);
-  printf ("Integer: %d\n", my_integer);
+/*  printf ("Integer: %d\n", my_integer);
   ft_printf ("Unsigned integer: %u\n", my_ui);
 
   ft_printf ("The same, as hexadecimal: %#x %#x\n", my_integer, my_ui);
@@ -60,7 +60,7 @@ int main()
   ft_printf ("String: %s\n", my_string);
 
   errno = EACCES;
-  ft_printf ("errno string (EACCES): %m\n");
+  ft_printf ("errno string (EACCES): %m\n");*/
 
   return 0;
 }
