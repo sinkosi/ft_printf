@@ -14,7 +14,7 @@
 # define FT_PRINTF_H
 # include "../libft/includes/libft.h"
 # include <wchar.h>
-//# include <stdio.h>
+# include <stdio.h>
 # include <stdarg.h>
 #include <stdint.h>
 
@@ -197,5 +197,7 @@ void			ft_flag_precision(t_printf *my_printf, char *str);
 void			ft_flag_set(t_printf *my_printf, char *str);
 void			ft_flag_reset(t_printf *my_printf);
 void			ft_error(char *str);
+
+char			*ft_ltoa(intmax_t n);
 
 #endif

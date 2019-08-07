@@ -26,6 +26,7 @@ void	ft_print_d_int(t_printf *my_printf, intmax_t n)
 	ft_flag_precision(my_printf, str);
 	my_printf->f_return += ft_strlen(str);
 	ft_putstr(str);
+	printf("\n%zu\n", ft_strlen(str));
 	ft_flag_width(my_printf);
 	ft_strdel(&str);
 }

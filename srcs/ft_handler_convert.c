@@ -14,11 +14,11 @@
 
 void	ft_handler_convert(t_printf *my_printf, va_list printf_list)
 {
-//	printf("char is %d\n", my_printf->convert);
+//	printf("ft_handler convert.c: char is %d\n", my_printf->convert);
 	if (my_printf->convert == 'i' || my_printf->convert == 'd')
 	{
-		ft_handler_d_int(my_printf, printf_list);
-		printf("DO we get here?");
+		printf("ft_handler.c D variable\n");
+		ft_handler_d_int(my_printf, printf_list);		
 	}
 	else if (my_printf->convert == 'c')
 		ft_handler_c_char(my_printf, printf_list);

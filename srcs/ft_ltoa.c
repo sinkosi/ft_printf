@@ -20,7 +20,7 @@ char    *ft_ltoa(intmax_t n)
 
 	i = ft_l_numlen(n);
 	if (n < 0)
-		n = ft_fabs(n);
+		n *= -1;
 	tmp = n;
 	if (!(str = ft_strnew(i)))
 		return (NULL);
