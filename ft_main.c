@@ -40,19 +40,19 @@ printf("Le fichier{CYAN}%s{eoc} contien : {RED}%s{eoc}", filename, str);
 
 int main()
 {
-  int my_integer = -42;
-/*  unsigned int my_ui = 23;
-  float my_float = 3.56;
+//  int my_integer = -42;
+  unsigned int my_ui = 23;
+/*  float my_float = 3.56;
   double my_double = 424242.171717;
   char my_char = 'w';
   char my_string[] = "Pardon me, may I borrow your nose?";
 */
-  ft_printf ("Integer: %d\n", my_integer);
-/*  printf ("Integer: %d\n", my_integer);
+//  ft_printf ("Integer: %d\n", my_integer);
+//  printf ("Integer: %d\n", my_integer);
   ft_printf ("Unsigned integer: %u\n", my_ui);
-
-  ft_printf ("The same, as hexadecimal: %#x %#x\n", my_integer, my_ui);
-
+  printf ("Unsigned integer: %u\n", my_ui);
+ // ft_printf ("The same, as hexadecimal: %#x %#x\n", my_integer, my_ui);
+/*
   ft_printf ("Floating-point: %f\n", my_float);
   ft_printf ("Double, exponential notation: %17.11e\n", my_double);
 

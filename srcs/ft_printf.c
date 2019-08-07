@@ -6,13 +6,13 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 16:19:44 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/28 15:09:25 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/08/07 08:41:48 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-int	ft_printf(const char *parse_str, ... )
+int	ft_printf(const char *parse_str, ...)
 {
 	t_printf	my_printf;
 	va_list		printf_list;

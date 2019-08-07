@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 10:51:35 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/28 13:57:11 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/08/07 08:34:34 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 # define FT_PRINTF_H
 # include "../libft/includes/libft.h"
 # include <wchar.h>
-# include <stdio.h>
 # include <stdarg.h>
-#include <stdint.h>
+# include <stdint.h>
 
 /*
 ** ************************************************************************ *
@@ -64,8 +63,11 @@ typedef struct	s_printf
 	int			j;
 	int			z;
 	char		convert;
-	//More definitions on https://linux.die.net/man/3/vfprintf
+
 }				t_printf;
+/*
+** More definitions on https://linux.die.net/man/3/vfprintf
+*/
 
 /*
 ** FT_PRINTF - writes the argument operands to standard output, formatted
@@ -127,12 +129,12 @@ typedef struct	s_printf
 ** ************************************************************************	*
 */
 /*
-** FT_FLAG_SIZE - 
+** FT_FLAG_SIZE -
 */
 void			ft_flag_size(t_printf *my_printf, size_t str_size);
 
 /*
-** FT_FLAG_WIDTH - 
+** FT_FLAG_WIDTH -
 */
 void			ft_flag_width(t_printf *my_printf);
 void			ft_flag_precision(t_printf *my_printf, char *str);
@@ -180,9 +182,12 @@ void			ft_print_e_exponent(t_printf *my_printf, double n);
 void			ft_print_f_float(t_printf *my_printf, float n);
 void			ft_print_o_octal(t_printf *my_printf, unsigned long long n);
 void			ft_print_s_str(t_printf *my_printf, char *str);
-void			ft_print_u_unsigned_int(t_printf *my_printf, unsigned long long n);
-void			ft_print_x_hexadecimal(t_printf *my_printf, unsigned long long n);
-void			ft_print_xc_hexadecimal(t_printf *my_printf, unsigned long long n);
+void			ft_print_u_unsigned_int(t_printf *my_printf,
+					unsigned long long n);
+void			ft_print_x_hexadecimal(t_printf *my_printf,
+					unsigned long long n);
+void			ft_print_xc_hexadecimal(t_printf *my_printf,
+					unsigned long long n);
 void			ft_print_p_pointer(t_printf *my_printf, void *pointer);
 void			ft_print_mod(t_printf *my_printf);
 
@@ -198,6 +203,6 @@ void			ft_flag_set(t_printf *my_printf, char *str);
 void			ft_flag_reset(t_printf *my_printf);
 void			ft_error(char *str);
 
-char			*ft_ltoa(intmax_t n);
+char			*ft_ltoa_printf(intmax_t nbr);
 
 #endif

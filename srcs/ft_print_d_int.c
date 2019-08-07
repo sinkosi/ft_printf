@@ -16,7 +16,7 @@ void	ft_print_d_int(t_printf *my_printf, intmax_t n)
 {
 	char	*str;
 
-	str = ft_itoa(n);
+	str = ft_ltoa_printf(n);
 	if (n < 0)
 		my_printf->flag_plus = -1;
 	ft_flag_size(my_printf, ft_strlen(str));
@@ -26,7 +26,7 @@ void	ft_print_d_int(t_printf *my_printf, intmax_t n)
 	ft_flag_precision(my_printf, str);
 	my_printf->f_return += ft_strlen(str);
 	ft_putstr(str);
-	printf("\n%zu\n", ft_strlen(str));
+	printf("ft_print_d_int: strlen of str: %zu", ft_strlen(str));
 	ft_flag_width(my_printf);
 	ft_strdel(&str);
 }

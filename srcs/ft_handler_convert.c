@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 11:10:00 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/08/06 16:29:08 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/08/07 08:47:36 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,8 @@
 
 void	ft_handler_convert(t_printf *my_printf, va_list printf_list)
 {
-//	printf("ft_handler convert.c: char is %d\n", my_printf->convert);
 	if (my_printf->convert == 'i' || my_printf->convert == 'd')
-	{
-		printf("ft_handler.c D variable\n");
-		ft_handler_d_int(my_printf, printf_list);		
-	}
+		ft_handler_d_int(my_printf, printf_list);
 	else if (my_printf->convert == 'c')
 		ft_handler_c_char(my_printf, printf_list);
 	else if (my_printf->convert == 'o')

@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 09:42:53 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/28 15:00:42 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/08/07 08:40:45 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	ft_flag_check(t_printf *my_printf)
 
 	err1 = ("\nERROR: FLAG ERROR");
 	err2 = ("\nERROR: CONFLICT DETECTED");
-	printf("ft_flag_check.c: Trying to find 0\n");
 	if (my_printf->h > 2 || my_printf->l > 2 || my_printf->j > 1
 			|| my_printf->z > 1 || my_printf->flag_hash > 1
 			|| my_printf->flag_zero > 1 || my_printf->flag_minus > 1
@@ -37,5 +36,4 @@ void	ft_flag_check(t_printf *my_printf)
 	else if ((my_printf->z > 0) && (my_printf->h > 0 || my_printf->l > 0
 			|| my_printf->j > 0))
 		ft_error(err2);
-	printf("ft_flag_check.c: Bottom of file\n");
 }
