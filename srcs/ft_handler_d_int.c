@@ -19,7 +19,6 @@ static void	ft_handler_d_char(t_printf *my_printf, char c)
 
 void		ft_handler_d_int(t_printf *my_printf, va_list printf_list)
 {
-	printf("ft_handler_d_int.c: Getting closer\n");
 	ft_flag_check(my_printf);
 	if (my_printf->h == 1)
 		ft_print_d_int(my_printf, va_arg(printf_list, int));

@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_d_int.c                                   :+:      :+:    :+:   */
+/*   ft_ultoa.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/28 09:47:16 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/28 09:47:18 by sinkosi          ###   ########.fr       */
+/*   Created: 2019/08/07 08:42:14 by sinkosi           #+#    #+#             */
+/*   Updated: 2019/08/07 08:46:05 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-void	ft_print_d_int(t_printf *my_printf, intmax_t n)
+static size_t	ft_num_ulen(uintmax_t n, int base)
 {
-	char	*str;
+	size_t	i;
 
-	str = ft_ltoa_printf(n);
-	if (n < 0)
-		my_printf->flag_plus = -1;
-	ft_flag_size(my_printf, ft_strlen(str));
-	ft_flag_space(my_printf);
-	ft_flag_width(my_printf);
-	ft_flag_plus(my_printf);
-	ft_flag_precision(my_printf, str);
-	my_printf->f_return += ft_strlen(str);
-	ft_putstr(str);
-	ft_flag_width(my_printf);
-	ft_strdel(&str);
+	i = 0;
+	while (n /= base)
+		i++;
+	return (i + 1);
+}
+
+char			*ft_ultoa(uintmax_t n, int base)
+{
+	size_t		i;
+	uintmax_t	tmp;
+	char		*new;
+
+	i = 0;
+	tmp = 0;
+	new = "0\0";
+	return (new);
 }

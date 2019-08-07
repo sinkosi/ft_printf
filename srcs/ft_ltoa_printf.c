@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_d_int.c                                   :+:      :+:    :+:   */
+/*   ft_ltoa_printf.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/28 09:47:16 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/28 09:47:18 by sinkosi          ###   ########.fr       */
+/*   Created: 2019/08/07 08:36:23 by sinkosi           #+#    #+#             */
+/*   Updated: 2019/08/07 08:37:00 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-void	ft_print_d_int(t_printf *my_printf, intmax_t n)
+char	*ft_ltoa_printf(intmax_t nbr)
 {
-	char	*str;
+	char		*str;
+	size_t		len;
 
-	str = ft_ltoa_printf(n);
-	if (n < 0)
-		my_printf->flag_plus = -1;
-	ft_flag_size(my_printf, ft_strlen(str));
-	ft_flag_space(my_printf);
-	ft_flag_width(my_printf);
-	ft_flag_plus(my_printf);
-	ft_flag_precision(my_printf, str);
-	my_printf->f_return += ft_strlen(str);
-	ft_putstr(str);
-	ft_flag_width(my_printf);
-	ft_strdel(&str);
+	if (nbr < 0)
+		nbr *= -1;
+	len = ft_numlen(nbr);
+	if (!(str = (char*)malloc(sizeof(char) * (len + 1))))
+		return (NULL);
+	str[len] = '\0';
+	if (nbr == 0)
+		str[0] = '0';
+	while (nbr > 0 && len >= 0)
+	{
+		str[len - 1] = ft_tochar(nbr % 10);
+		nbr /= 10;
+		len--;
+	}
+	return (str);
 }
