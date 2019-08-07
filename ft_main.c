@@ -40,7 +40,7 @@ printf("Le fichier{CYAN}%s{eoc} contien : {RED}%s{eoc}", filename, str);
 
 int main()
 {
-//  int my_integer = -42;
+  int my_integer = -42;
   unsigned int my_ui = 23;
 /*  float my_float = 3.56;
   double my_double = 424242.171717;
@@ -49,9 +49,15 @@ int main()
 */
 //  ft_printf ("Integer: %d\n", my_integer);
 //  printf ("Integer: %d\n", my_integer);
-  ft_printf ("Unsigned integer: %u\n", my_ui);
-  printf ("Unsigned integer: %u\n", my_ui);
- // ft_printf ("The same, as hexadecimal: %#x %#x\n", my_integer, my_ui);
+  /*ft_printf ("Unsigned integer: %u\n", my_ui);
+  printf ("Unsigned integer: %u\n", my_ui);*/
+ /* 
+ ft_printf ("The same, as hexadecimal: %#x %#x\n", my_integer, my_ui);
+ printf ("The same, as hexadecimal: %#x %#x\n", my_integer, my_ui);
+ char	m = 'f' - '2' + 48;
+char	n = 'f' - 'a' + 48 + 1;
+ft_printf("%c%c\n", m, n);*/
+ft_printf("%5c", 42);
 /*
   ft_printf ("Floating-point: %f\n", my_float);
   ft_printf ("Double, exponential notation: %17.11e\n", my_double);

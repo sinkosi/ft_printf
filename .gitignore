@@ -40,6 +40,7 @@ Thumbs.db
 a.out
 *.gch
 .idea/workspace.xml
+.vscode
 .vscode/launch.json
 .vscode/tasks.json
 a.out.dSYM/Contents/Info.plist

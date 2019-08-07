@@ -14,6 +14,7 @@
 
 void	ft_flag_width(t_printf *my_printf)
 {
+	//printf("ft_flag_width.c: flag_minus is %d\n", my_printf->flag_minus);
 	if (my_printf->flag_minus == 1)
 		my_printf->flag_minus = 2;
 	else if (my_printf->flag_minus == 0 || my_printf->flag_minus == 2)

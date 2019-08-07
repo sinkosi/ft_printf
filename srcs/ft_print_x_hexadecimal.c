@@ -23,6 +23,7 @@ void	ft_print_x_hexadecimal(t_printf *my_printf, unsigned long long n)
 		ft_putstr("0x");
 		my_printf->f_return += 2;
 	}
+	str = ft_strlowcase(str);
 	ft_putstr(str);
 	my_printf->f_return += ft_strlen(str);
 	ft_flag_width(my_printf);

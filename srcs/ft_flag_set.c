@@ -12,12 +12,15 @@
 
 #include "../includes/ft_printf.h"
 
+/*
+** Set flag plus to one, do not incremement
+ */
 void	ft_flag_set(t_printf *my_printf, char *str)
 {
 	if (str[my_printf->i] == '-')
-		my_printf->flag_minus += 1;
+		my_printf->flag_minus = 1;
 	else if (str[my_printf->i] == '+')
-		my_printf->flag_plus += 1;
+		my_printf->flag_plus = 1;
 	else if (str[my_printf->i] == ' ')
 		my_printf->flag_space += 1;
 	else if (str[my_printf->i] == '#')
@@ -29,7 +32,7 @@ void	ft_flag_set(t_printf *my_printf, char *str)
 	else if (str[my_printf->i] == 'l')
 		my_printf->l += 1;
 	else if (str[my_printf->i] == 'j')
-		my_printf->j += 1;
+		my_printf->j = 1;
 	else if (str[my_printf->i] == 'z')
-		my_printf->z += 1;
+		my_printf->z = 1;
 }
