@@ -20,6 +20,12 @@ void	ft_convert(t_printf *my_printf, va_list printf_list, char *str)
 	{
 		if (ft_strchr_bool(FLAGS, str[my_printf->i]) == 1)
 			ft_flag_set(my_printf, str);
+		else if (my_printf->field_width < ft_atoi(&str[my_printf->i]) &&
+			(str[my_printf->i - 1] == '0' || (ft_isdigit(str[my_printf->i - 1])
+			== 0)) && str[my_printf->i - 1] != '.')
+			my_printf->field_width = ft_atoi(&str[my_printf->i]);
+		else if (str[my_printf->i - 1] == '.')
+			my_printf->prec_width = ft_atoi(&str[my_printf->i]);
 		my_printf->i += 1;
 	}
 	if (ft_strchr_bool(PARSE, str[my_printf->i]))

@@ -15,11 +15,15 @@
 void	ft_flag_plus(t_printf *my_printf)
 {
 	if (my_printf->flag_plus == -1)
+	{
 		ft_putchar('-');
+		my_printf->f_return += 1;
+	}
 	else if (my_printf->flag_plus == 1)
+	{
 		ft_putchar('+');
-	if (my_printf->flag_plus == -1 || my_printf->flag_plus == 1)
-		my_printf->f_return++;
+		my_printf->f_return += 1;
+	}
 	if (my_printf->flag_zero == 1 && my_printf->flag_plus != 0)
 		my_printf->flag_plus = 2;
 }

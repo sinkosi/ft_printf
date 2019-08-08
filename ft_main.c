@@ -40,38 +40,38 @@ printf("Le fichier{CYAN}%s{eoc} contien : {RED}%s{eoc}", filename, str);
 
 int main()
 {
-  int my_integer = -42;
-  unsigned int my_ui = 23;
-/*  float my_float = 3.56;
-  double my_double = 424242.171717;
-  char my_char = 'w';
-  char my_string[] = "Pardon me, may I borrow your nose?";
-*/
-//  ft_printf ("Integer: %d\n", my_integer);
-//  printf ("Integer: %d\n", my_integer);
-  /*ft_printf ("Unsigned integer: %u\n", my_ui);
-  printf ("Unsigned integer: %u\n", my_ui);*/
- /* 
- ft_printf ("The same, as hexadecimal: %#x %#x\n", my_integer, my_ui);
- printf ("The same, as hexadecimal: %#x %#x\n", my_integer, my_ui);
- char	m = 'f' - '2' + 48;
-char	n = 'f' - 'a' + 48 + 1;
-ft_printf("%c%c\n", m, n);*/
-ft_printf("%5c", 42);
-/*
-  ft_printf ("Floating-point: %f\n", my_float);
-  ft_printf ("Double, exponential notation: %17.11e\n", my_double);
+  	int my_integer = -42;
+  	unsigned int my_ui = 23;
+  	float my_float = 3.56;
+  	double my_double = 424242.171717;
+  	char my_char = 'w';
+  	char my_string[] = "Pardon me, may I borrow your nose?";
 
-  ft_printf ("Single character: %c\n", my_char);
-  ft_printf ("String: %s\n", my_string);
+	ft_printf ("Integer: %d\n", my_integer);
+  	printf ("Integer: %d\n", my_integer);
+  	ft_printf ("Unsigned integer: %u\n", my_ui);
+	printf ("Unsigned integer: %u\n", my_ui);
 
-  errno = EACCES;
-  ft_printf ("errno string (EACCES): %m\n");*/
+	ft_printf ("The same, as hexadecimal: %#x %#x\n", my_integer, my_ui);
+	printf ("The same, as hexadecimal: %#x %#x\n", my_integer, my_ui);
+	char	m = 'f' - '2' + 48;
+	char	n = 'f' - 'a' + 48 + 1;
+	ft_printf("%c%c\n", m, n);
+	ft_printf("%105c", 42);
 
-  return 0;
+	ft_printf ("Floating-point: %f\n", my_float);
+	ft_printf ("Double, exponential notation: %17.11e\n", my_double);
+
+	ft_printf ("Single character: %c\n", my_char);
+	ft_printf ("String: %s\n", my_string);
+
+  	errno = EACCES;
+  	ft_printf ("errno string (EACCES): %m\n");
+
+	return 0;
 }
 /*
-The code example above produces the following output on a GNU system: 
+The code example above produces the following output on a GNU system:
 
 Integer: -42
 Unsigned integer: 23

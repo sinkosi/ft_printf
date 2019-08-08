@@ -18,7 +18,7 @@ void	ft_print_p_pointer(t_printf *my_printf, void *pointer)
 
 	str = ft_itoa_base((int)pointer, 16);
 	ft_flag_size(my_printf, ft_strlen(str));
-	my_printf->format_word -= 2;
+	my_printf->field_width -= 2;
 	if (my_printf->flag_zero == 1)
 	{
 		ft_putstr("0x");

@@ -23,19 +23,19 @@ void	ft_flag_width(t_printf *my_printf)
 				&& my_printf->flag_minus == 0)
 		{
 			ft_flag_plus(my_printf);
-			while (my_printf->format_word > 0)
+			while (my_printf->field_width > 0)
 			{
 				ft_putchar('0');
 				my_printf->f_return += 1;
-				my_printf->format_word -= 1;
+				my_printf->field_width -= 1;
 			}
 		}
 		else
-			while (my_printf->format_word > 0)
+			while (my_printf->field_width > 0)
 			{
 				ft_putchar(' ');
 				my_printf->f_return += 1;
-				my_printf->format_word -= 1;
+				my_printf->field_width -= 1;
 			}
 	}
 }

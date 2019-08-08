@@ -17,7 +17,7 @@
 # include <stdarg.h>
 # include <stdint.h>
 
-//#include <stdio.h>
+#include <stdio.h>
 /*
 ** ************************************************************************ *
 **									MACROS									*
@@ -54,10 +54,10 @@ typedef struct	s_printf
 	int			flag_space;
 	int			flag_hash;
 	int			flag_zero;
-	int			format_word;
+	int			field_width;
 	int			f_return;
 	int			precision;
-	int			prec_len;
+	int			prec_width;
 	int			i;
 	int			h;
 	int			l;

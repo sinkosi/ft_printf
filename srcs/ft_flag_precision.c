@@ -12,12 +12,17 @@
 
 #include "../includes/ft_printf.h"
 
+/*
+** The purpose of this function is to be
+*/
 void	ft_flag_precision(t_printf *my_printf, char *str)
 {
 	char	c;
 
 	c = my_printf->convert;
-	if ((str[0] != '0') && (my_printf->prec_len < 0) &&
+
+	printf("ft_flag_precision.c: Do we make it her?\n");
+	if ((str[0] != '0') && (my_printf->prec_width < 0) &&
 			(my_printf->flag_hash == 1) && (c == 'o'))
 	{
 		ft_putchar('0');
@@ -25,10 +30,10 @@ void	ft_flag_precision(t_printf *my_printf, char *str)
 	}
 	if (c == 'i' || c == 'd' || c == 'x' || c == 'X' || c == 'o' ||
 			c == 'p' || c == 'u')
-		while (my_printf->prec_len > 0)
+		while (my_printf->prec_width > 0)
 		{
 			ft_putchar('0');
-			my_printf->prec_len -= 1;
+			my_printf->prec_width -= 1;
 			my_printf->f_return += 1;
 		}
 }
