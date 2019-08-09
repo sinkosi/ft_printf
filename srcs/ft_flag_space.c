@@ -14,7 +14,7 @@
 
 void	ft_flag_space(t_printf *my_printf)
 {
-	printf("ft_flag_space.c: Do we get this far?\n");
+	//printf("ft_flag_space.c: Do we get this far?\n");
 	if (my_printf->flag_space == 1 && my_printf->flag_plus == 0)
 	{
 		ft_putchar(' ');

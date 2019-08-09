@@ -46,6 +46,16 @@
 **									STRUCTURE								*
 ** ************************************************************************	*
 */
+/*
+** T_PRINTF - This structure holds all the variables that can either be turned
+**		on or off regarding how to format the string that has been passed to it.
+** FLAG_MINUS - If this flag is turned to 1. Then it means that the output
+**		should be left-justified. The default is right justification.
+** FLAG_PLUS - If this flag is turned to 1, it means prints a '+' ahead of the
+**		number you wish to output. If it is -1, it means print a '-' ahead
+**		of the number you wish to output.
+** FLAG_SPACE
+*/
 
 typedef struct	s_printf
 {
