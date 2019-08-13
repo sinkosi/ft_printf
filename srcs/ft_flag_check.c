@@ -17,8 +17,8 @@ void	ft_flag_check(t_printf *my_printf)
 	char *err1;
 	char *err2;
 
-	err1 = ("\nERROR: FLAG ERROR");
-	err2 = ("\nERROR: CONFLICT DETECTED");
+	err1 = ("\nERROR: FLAG CHECK FAILURE");
+	err2 = ("\nERROR: FLAG FAILURE");
 	if (my_printf->h > 2 || my_printf->l > 2 || my_printf->j > 1
 			|| my_printf->z > 1 || my_printf->flag_hash > 1
 			|| my_printf->flag_zero > 1 || my_printf->flag_minus > 1

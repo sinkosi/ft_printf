@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 11:49:34 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/28 11:49:35 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/08/13 11:06:34 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 /*
 ** Set flag plus to one, do not incremement
- */
+*/
+
 void	ft_flag_set(t_printf *my_printf, char *str)
 {
 	if (str[my_printf->i] == '-')

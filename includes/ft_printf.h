@@ -16,8 +16,8 @@
 # include <wchar.h>
 # include <stdarg.h>
 # include <stdint.h>
-
 #include <stdio.h>
+
 /*
 ** ************************************************************************ *
 **									MACROS									*
@@ -158,17 +158,39 @@ void			ft_flag_space(t_printf *my_printf);
 **									HANDLERS								*
 ** ************************************************************************	*
 */
+
 /*
-** ft_char_handler - This is the handler for the char character. It parses the
-**	the input into ft_printf and handles the char and only the char leaving
-**	the string remainder on 0++;
+** FT_HANDLER_C_CHAR - This is the handler for the char character. It parses the
+**		the input into ft_printf and handles the char and only the char leaving
+**		the string remainder on 0++;
 */
 void			ft_handler_c_char(t_printf *my_printf, va_list printf_list);
+/*
+** FT_HANDLER_D_INT - This is the handler for parsing integers. The function
+**		does not only look at data types of type 'int' only. It will look for
+**		integers of type char to type size_t.
+*/
 void			ft_handler_d_int(t_printf *my_printf, va_list printf_list);
+
+// NOT MADE YET
 void			ft_handler_e_exponent(t_printf *my_printf, va_list printf_list);
+//NOT MADE YET
 void			ft_handler_f_float(t_printf *my_printf, va_list printf_list);
+/*
+** FT_HANDLER_O_OCTAL - This is the handler for octal strings. The function
+**		does not work with (ft_flag_hash), this function works with the %o
+**		conversion method. Check ft_flag_hash for prefix on octal.
+*/
 void			ft_handler_o_octal(t_printf *my_printf, va_list printf_list);
+/*
+** FT_HANDLER_S_STR - This is the handler for strings, either with variables
+**		or strings declared in the VA_LIST itself. The function uses a
+**		ft_putstr from Libft, and updates the return using FT_STRLEN.
+*/
 void			ft_handler_s_str(t_printf *my_printf, va_list printf_list);
+/*
+** FT_HANDLER_U_UNSIGNED_INT - 
+*/
 void			ft_handler_u_unsigned_int(t_printf *my_printf,
 		va_list printf_list);
 void			ft_handler_x_hexadecimal(t_printf *my_printf,

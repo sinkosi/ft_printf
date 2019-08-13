@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 12:04:16 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/28 12:11:40 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/08/13 09:15:13 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,12 @@
 /*
 ** The purpose of this function is to be
 */
+
 void	ft_flag_precision(t_printf *my_printf, char *str)
 {
 	char	c;
 
 	c = my_printf->convert;
-
-	printf("ft_flag_precision.c: Do we make it her?\n");
 	if ((str[0] != '0') && (my_printf->prec_width < 0) &&
 			(my_printf->flag_hash == 1) && (c == 'o'))
 	{
