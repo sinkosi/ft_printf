@@ -26,7 +26,7 @@ void	ft_flag_set(t_printf *my_printf, char *str)
 		my_printf->flag_space += 1;
 	else if (str[my_printf->i] == '#')
 		my_printf->flag_hash += 1;
-	else if (str[my_printf->i] == '0' && (str[my_printf->i-1] == '%'))
+	else if (str[my_printf->i] == '0' && (str[my_printf->i - 1] == '%' || str[my_printf->i - 1] == '#'))
 		my_printf->flag_zero += 1;
 	else if (str[my_printf->i] == 'h')
 		my_printf->h += 1;

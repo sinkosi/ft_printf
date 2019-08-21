@@ -24,7 +24,7 @@ int	ft_printf(const char *parse_str, ...)
 	{
 		if (parse_str[my_printf.i] == '%')
 		{
-			my_printf.i++;
+			my_printf.i += 1;
 			ft_convert(&my_printf, printf_list, (char *)parse_str);
 		}
 		else
