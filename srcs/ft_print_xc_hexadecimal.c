@@ -18,13 +18,17 @@ void	ft_print_xc_hexadecimal(t_printf *my_printf, unsigned long long n)
 
 	str = ft_itoa_base(n, 16);
 	ft_flag_size(my_printf, ft_strlen(str));
-	ft_flag_width(my_printf);
+	if (my_printf->flag_minus == 0 && my_printf->flag_zero == 0 && my_printf->flag_hash == 1)
+		ft_flag_width(my_printf);
 	if (str[0] != '0' && my_printf->flag_hash == 1)
 	{
 		ft_putstr("0X");
 		my_printf->f_return += 2;
 	}
+	ft_flag_width(my_printf);
 	ft_putstr(str);
 	my_printf->f_return += ft_strlen(str);
+	if (my_printf->field_width > 0)
+		ft_flag_width(my_printf);
 	ft_strdel(&str);
 }
