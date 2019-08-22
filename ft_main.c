@@ -77,8 +77,11 @@ int main()
 	//ft_printf("%-5.10o\n", 2500);
 	//ft_printf("%-10.5o\n", 2500);
 	//ft_printf("%-05o", 2500);
-	ft_printf("% 10.5d", 4242);
-	
+	//ft_printf("% 10.5d", 4242);
+	//ft_printf("%.2s is a string\n", "this");
+	//printf("%.2s is a string\n", "this");
+	ft_printf("%5.2s is a string\n", "this");
+	printf("%5.2s is a string\n", "this");
 	return 0;
 }
 /*
