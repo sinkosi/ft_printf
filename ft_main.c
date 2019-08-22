@@ -68,15 +68,16 @@ int main()
   	errno = EACCES;
   	ft_printf ("errno string (EACCES): %m\n");*/
 
-	//ft_printf("%-10x\n", 42);
-	//ft_printf("%10x r", 42);
-	//ft_printf("%010x", 542);
-	ft_printf("ft_printf\t%#8x\n", 42);
-	printf("printf\t\t%#8x\n", 42);
-	ft_printf("ft_printf\t%#08x\n", 42);
-	printf("printf\t\t%#08x\n", 42);
-	ft_printf("ft_printf\t%#-08x", 42);
-	//printf("printf\t%#-08x", 42);
+	/*ft_printf("%x\n", -42);
+	printf("%x\n", -42);
+	ft_printf("%X\n", -42);
+	printf("%X", -42);*/
+	ft_printf("%-#6o\n", 2500);
+	printf("%-#6o\n", 2500);
+	//ft_printf("%-5.10o\n", 2500);
+	//ft_printf("%-10.5o\n", 2500);
+	//ft_printf("%-05o", 2500);
+
 	return 0;
 }
 /*

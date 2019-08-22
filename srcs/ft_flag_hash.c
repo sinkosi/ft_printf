@@ -31,4 +31,5 @@ void	ft_flag_hash(t_printf *my_printf, char *str)
 		ft_putstr("0X");
 		my_printf->f_return += 2;
 	}
+	my_printf->i += 1;
 }

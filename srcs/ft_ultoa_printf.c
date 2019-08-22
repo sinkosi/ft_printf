@@ -26,10 +26,10 @@ char			*ft_ultoa(uintmax_t n, int base)
 {
 	size_t		i;
 	uintmax_t	tmp;
-	char		*new;
+	char		*str;
 
 	i = 0;
 	tmp = 0;
-	new = "0\0";
-	return (new);
+	str = "0\0";
+	return (str);
 }
