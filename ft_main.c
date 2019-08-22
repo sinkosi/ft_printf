@@ -72,12 +72,13 @@ int main()
 	printf("%x\n", -42);
 	ft_printf("%X\n", -42);
 	printf("%X", -42);*/
-	ft_printf("%-#6o\n", 2500);
-	printf("%-#6o\n", 2500);
+//	ft_printf("%-#6o\n", 2500);
+//	printf("%-#6o\n", 2500);
 	//ft_printf("%-5.10o\n", 2500);
 	//ft_printf("%-10.5o\n", 2500);
 	//ft_printf("%-05o", 2500);
-
+	ft_printf("% 10.5d", 4242);
+	
 	return 0;
 }
 /*
