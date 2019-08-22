@@ -70,8 +70,13 @@ int main()
 
 	//ft_printf("%-10x\n", 42);
 	//ft_printf("%10x r", 42);
-	ft_printf("%010x", 542);
-
+	//ft_printf("%010x", 542);
+	ft_printf("ft_printf\t%#8x\n", 42);
+	printf("printf\t\t%#8x\n", 42);
+	ft_printf("ft_printf\t%#08x\n", 42);
+	printf("printf\t\t%#08x\n", 42);
+	ft_printf("ft_printf\t%#-08x", 42);
+	//printf("printf\t%#-08x", 42);
 	return 0;
 }
 /*
