@@ -25,12 +25,15 @@ static void	ft_handler_x_char(t_printf *my_printf, unsigned char c)
 void		ft_handler_x_hexadecimal(t_printf *my_printf, va_list printf_list)
 {
 	ft_flag_check(my_printf);
+	//ft_putnbr(va_arg(printf_list, long));
+	//printf("handler_x my_printf->l = %d\n", my_printf->l);
+	//printf("handler_x my_printf->convert = %c\n", my_printf->convert);
 	if (my_printf->h == 1)
 		ft_handler_x_short(my_printf, va_arg(printf_list, unsigned int));
 	else if (my_printf->h == 2)
 		ft_handler_x_char(my_printf, va_arg(printf_list, unsigned int));
 	else if (my_printf->l == 1)
-		ft_print_x_hexadecimal(my_printf, va_arg(printf_list, unsigned long));
+		ft_print_x_hexadecimal(my_printf, va_arg(printf_list, long));
 	else if (my_printf->l == 2)
 		ft_print_x_hexadecimal(my_printf,
 				va_arg(printf_list, unsigned long long));

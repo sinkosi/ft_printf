@@ -80,8 +80,12 @@ int main()
 	//ft_printf("% 10.5d", 4242);
 	//ft_printf("%.2s is a string\n", "this");
 	//printf("%.2s is a string\n", "this");
-	ft_printf("%5.2s is a string\n", "this");
-	printf("%5.2s is a string\n", "this");
+	//ft_printf("%5.2s is a string\n", "this");
+	//printf("%5.2s is a string\n", "this");
+	//ft_printf("%hd\n", 32768);
+	//ft_printf("%hhd", -129);
+	ft_printf("%lx\n", 4294967296);
+	
 	return 0;
 }
 /*

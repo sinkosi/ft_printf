@@ -243,5 +243,6 @@ void			ft_flag_reset(t_printf *my_printf);
 void			ft_error(char *str);
 
 char			*ft_ltoa_printf(intmax_t nbr);
+char			*ft_ltoa_base(long long value, int base);
 
 #endif

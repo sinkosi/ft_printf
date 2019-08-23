@@ -93,6 +93,7 @@ SRCS_NAME	= ft_convert.c		\
 		  ft_print_x_hexadecimal.c	\
 		  ft_print_xc_hexadecimal.c	\
 		  ft_ltoa_printf.c		\
+		  ft_ltoa_base.c		\
 		  ft_ultoa_printf.c
 
 OBJ		= $(addprefix $(OBJ_PATH)/, $(SRCS_NAME:%.c=%.o))

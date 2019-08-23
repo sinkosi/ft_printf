@@ -17,13 +17,22 @@ static void	ft_handler_d_char(t_printf *my_printf, char c)
 	ft_print_d_int(my_printf, c);
 }
 
+static void	ft_handler_d_short(t_printf *my_printf, short n)
+{
+	ft_print_d_int(my_printf, n);
+}
+
 void		ft_handler_d_int(t_printf *my_printf, va_list printf_list)
 {
+	/*printf("handler_d_int my_printf->h = %d\n", my_printf->h);
+	printf("handler_d_int my_printf->l = %d\n", my_printf->l);
+	printf("handler_d_int my_printf->j = %d\n", my_printf->j);
+	printf("handler_d_int my_printf->z = %d\n", my_printf->z);*/
 	ft_flag_check(my_printf);
 	if (my_printf->h == 1)
-		ft_print_d_int(my_printf, va_arg(printf_list, int));
+		ft_handler_d_short(my_printf, va_arg(printf_list, int));//ft_print_d_int(my_printf, va_arg(printf_list, int));
 	else if (my_printf->h == 2)
-		ft_print_d_int(my_printf, va_arg(printf_list, int));
+		ft_handler_d_char(my_printf, va_arg(printf_list, int));//ft_print_d_int(my_printf, va_arg(printf_list, int));
 	else if (my_printf->l == 1)
 		ft_print_d_int(my_printf, va_arg(printf_list, long));
 	else if (my_printf->l == 2)

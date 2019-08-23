@@ -16,7 +16,7 @@ void	ft_print_xc_hexadecimal(t_printf *my_printf, unsigned long long n)
 {
 	char	*str;
 
-	str = ft_itoa_base(n, 16);
+	str = ft_ltoa_base(n, 16);
 	ft_flag_size(my_printf, ft_strlen(str));
 	if (my_printf->flag_minus == 0 && my_printf->flag_zero == 0
 		&& my_printf->flag_hash == 1)
