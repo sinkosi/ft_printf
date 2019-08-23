@@ -195,11 +195,35 @@ void			ft_handler_s_str(t_printf *my_printf, va_list printf_list);
 */
 void			ft_handler_u_unsigned_int(t_printf *my_printf,
 		va_list printf_list);
+/*
+** FT_HANDLER_X_HEXADECIMAL - This is the handler for the hexadecimal conversion
+**		and it will check the integer that is parsed to it and call the print
+**		function that is appropriate for its data-type. The print will return
+**		lowercase output.
+*/
 void			ft_handler_x_hexadecimal(t_printf *my_printf,
 		va_list printf_list);
+/*
+** FT_HANDLER_XC_HEXADECIMAL - This handler is for hexadecimal conversion
+**		and it will check the integer that is parsed to it and call the print
+**		function that is appropriate for its data-type. The print will return
+**		uppercase output.
+*/
 void			ft_handler_xc_hexadecimal(t_printf *my_printf,
 		va_list printf_list);
+/*
+** FT_HANDLER_P_POINTER - This is the handler for printing out a pointer.
+**		This code is very basic and similar code exists in libft. The handler
+**		is passed a data structure of type "(void *)", this is then cast
+**		explicity to a data type that may output to the standard output.
+*/
 void			ft_handler_p_pointer(t_printf *my_printf, va_list printf_list);
+/*
+** FT_HANDLER_CONVERT - This is one of the most imperative functions that exist
+**		within ft_printf. The purpose of this function is to obtain the identity
+**		of the format character. Upon obtaining this, the function calls the
+**		appropriate handler. i.e hexadecimal, octal, string, int etc.
+*/
 void			ft_handler_convert(t_printf *my_printf, va_list printf_list);
 
 /*
@@ -208,18 +232,37 @@ void			ft_handler_convert(t_printf *my_printf, va_list printf_list);
 ** ************************************************************************	*
 */
 /*
-** FT_PRINT_C_CHAR - This function will print a char as given.
+** FT_PRINT_C_CHAR - This function will print a char as given or parsed by
+**		variable.
 */
 void			ft_print_c_char(t_printf *my_printf, int c);
 /*
-** FT_PRINT_D_INT - This function will be called by the ft_handler_d function
-**		and print an integer and update the return using the STRLEN of the
-**		number.
+** FT_PRINT_D_INT - This function will be called by the ft_handler_d_int
+**		function and print an integer and update the return using the STRLEN
+**		of the number. The integer is converted to a string prior to output
+**		occurring.
 */
 void			ft_print_d_int(t_printf *my_printf, intmax_t n);
+//NOT DONE
 void			ft_print_e_exponent(t_printf *my_printf, double n);
+//NOT DONE
 void			ft_print_f_float(t_printf *my_printf, float n);
+/*
+** FT_PRINT_O_OCTAL - This function will be called by the ft_handler_o_octal
+**		function and print an octal number. The function will convert the
+**		inital integer to base 8 and store the value in a data structure of
+**		type string(char *) and update the return using the	FT_STRLEN of the
+**		string.
+*/
 void			ft_print_o_octal(t_printf *my_printf, unsigned long long n);
+/*
+** FT_PRINT_S_STR - This function will be called by the ft_handler_s_str
+**		function and it will operate in the same manner as an FT_PUTSTR, which
+**		can be found in the LIBFT Library. This function has a strong precision
+**		limiter. The call to precision within this function will cause the
+**		string (char *) to be truncated. The value F_RETURN contained in the
+**		struct is updated with the FT_STRLEN of the output string.
+*/
 void			ft_print_s_str(t_printf *my_printf, char *str);
 void			ft_print_u_unsigned_int(t_printf *my_printf,
 					unsigned long long n);
