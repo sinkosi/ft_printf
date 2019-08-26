@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 09:45:38 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/28 15:03:36 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/08/26 14:19:53 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,6 @@ static void	ft_handler_x_char(t_printf *my_printf, unsigned char c)
 void		ft_handler_x_hexadecimal(t_printf *my_printf, va_list printf_list)
 {
 	ft_flag_check(my_printf);
-	//ft_putnbr(va_arg(printf_list, long));
-	//printf("handler_x my_printf->l = %d\n", my_printf->l);
-	//printf("handler_x my_printf->convert = %c\n", my_printf->convert);
 	if (my_printf->h == 1)
 		ft_handler_x_short(my_printf, va_arg(printf_list, unsigned int));
 	else if (my_printf->h == 2)

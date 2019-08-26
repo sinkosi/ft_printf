@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 09:44:59 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/08/07 08:46:50 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/08/26 14:21:11 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,11 @@ static void	ft_handler_d_short(t_printf *my_printf, short n)
 
 void		ft_handler_d_int(t_printf *my_printf, va_list printf_list)
 {
-	/*printf("handler_d_int my_printf->h = %d\n", my_printf->h);
-	printf("handler_d_int my_printf->l = %d\n", my_printf->l);
-	printf("handler_d_int my_printf->j = %d\n", my_printf->j);
-	printf("handler_d_int my_printf->z = %d\n", my_printf->z);*/
 	ft_flag_check(my_printf);
 	if (my_printf->h == 1)
-		ft_handler_d_short(my_printf, va_arg(printf_list, int));//ft_print_d_int(my_printf, va_arg(printf_list, int));
+		ft_handler_d_short(my_printf, va_arg(printf_list, int));
 	else if (my_printf->h == 2)
-		ft_handler_d_char(my_printf, va_arg(printf_list, int));//ft_print_d_int(my_printf, va_arg(printf_list, int));
+		ft_handler_d_char(my_printf, va_arg(printf_list, int));
 	else if (my_printf->l == 1)
 		ft_print_d_int(my_printf, va_arg(printf_list, long));
 	else if (my_printf->l == 2)

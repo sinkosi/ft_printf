@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/21 16:07:09 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/06/24 12:14:01 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/08/26 14:18:40 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ static void	ft_table_ref(char *str, long long value, int digits, int base)
 
 char		*ft_ltoa_base(long long value, int base)
 {
-	char	*result;
-	long long		digits;
+	char		*result;
+	long long	digits;
 
 	result = NULL;
 	if (2 > base || base > 16)
