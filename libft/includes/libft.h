@@ -796,7 +796,7 @@ char			*ft_strcapitalize(char *str);
 **		The function works for base 10 digits. It also works for
 **		a base >= 2 and bases <= 16.
 */
-int				ft_numlen_base(int n, int base);
+int				ft_numlen_base(long long n, int base);
 
 /*
 ** FT_FORLOOP - This function takes three parameters as argument and converts

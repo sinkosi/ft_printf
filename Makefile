@@ -72,6 +72,7 @@ SRCS_NAME	= ft_convert.c		\
 		  ft_flag_set.c			\
 		  ft_flag_size.c		\
 		  ft_flag_width.c		\
+		  ft_handler_b_binary.c	\
 		  ft_handler_c_char.c	\
 		  ft_handler_d_int.c	\
 		  ft_handler_o_octal.c	\
@@ -81,6 +82,7 @@ SRCS_NAME	= ft_convert.c		\
 		  ft_handler_x_hexadecimal.c	\
 		  ft_handler_xc_hexadecimal.c	\
 		  ft_handler_convert.c			\
+		  ft_print_b_binary.c	\
 		  ft_print_c_char.c		\
 		  ft_print_d_int.c		\
 		  ft_printf.c			\

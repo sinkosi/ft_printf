@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 11:17:44 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/08/06 16:25:40 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/08/28 11:15:52 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,14 @@ printf("Le fichier{CYAN}%s{eoc} contien : {RED}%s{eoc}", filename, str);
 
 int main()
 {
-  	/*int my_integer = -42;
+  	int my_integer = -42;
   	unsigned int my_ui = 23;
   	float my_float = 3.56;
   	double my_double = 424242.171717;
   	char my_char = 'w';
   	char my_string[] = "Pardon me, may I borrow your nose?";
 
-	ft_printf ("Integer: %d\n", my_integer);
+	/*ft_printf ("Integer: %d\n", my_integer);
   	printf ("Integer: %d\n", my_integer);
   	ft_printf ("Unsigned integer: %u\n", my_ui);
 	printf ("Unsigned integer: %u\n", my_ui);
@@ -84,8 +84,25 @@ int main()
 	//printf("%5.2s is a string\n", "this");
 	//ft_printf("%hd\n", 32768);
 	//ft_printf("%hhd", -129);
-	ft_printf("%lx\n", 4294967296);
-	
+	//ft_printf("%lx\n", 4294967296);
+	//ft_printf("The binary for 5 is %b\n", 5);
+	//ft_printf("The binary for 42 is %B\n", 42);
+	ft_putendl("NOW WE WILL PRINT MEMORY ADDRESSES");
+	//void *my_mem = &my_integer;
+	printf("The memory address of 'my_integer' is = %p\n", &my_integer);
+	ft_printf("The memory address of 'my_integer' is = %p\n", &my_integer);
+	//printf("The memory address of 'my_integer' is = %p", &my_integer);
+	/*ft_printf("The memory address of 'my_ui is = %p\n", &my_ui);
+	ft_printf("The memory address of 'my_float' is = %p\n", &my_float);
+	ft_printf("The memory address of 'my_double' is = %p\n", &my_double);
+	ft_printf("The memory address of 'my_char' is = %p\n", &my_char);
+	ft_printf("And finally the address of 'my_string' is %p\n", &my_string);*/
+	//ft_printf("THESE ARE WORDS  and also %% \n");
+	/*int m = 0;
+	char *fok = "Is the a slash in \% this sentence";
+	ft_putendl(fok);
+	m = ft_strchr_bool(fok, '\%');
+	ft_putnbr(m);*/
 	return 0;
 }
 /*

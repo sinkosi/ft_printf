@@ -25,7 +25,7 @@
 */
 # define UINT_MAX 4294967295
 # define FLAGS "hljz#0-+ ."
-# define PARSE "cCdDioOpsSuUxX\%"
+# define PARSE "bBcCdDioOpsSuUxX\%"
 
 /*
 ** ************************************************************************ *
@@ -183,6 +183,12 @@ void			ft_handler_f_float(t_printf *my_printf, va_list printf_list);
 */
 void			ft_handler_o_octal(t_printf *my_printf, va_list printf_list);
 /*
+** FT_HANDLER_B_BINARY - This is the handler for binary strings. The function
+**		will wait for a %B or %b flag and convert the base 10 input to base 2.
+**		Conversion takes places using a form of *toa_base.
+*/
+void			ft_handler_b_binary(t_printf *my_printf, va_list printf_list);
+/*
 ** FT_HANDLER_S_STR - This is the handler for strings, either with variables
 **		or strings declared in the VA_LIST itself. The function uses a
 **		ft_putstr from Libft, and updates the return using FT_STRLEN.
@@ -255,6 +261,7 @@ void			ft_print_f_float(t_printf *my_printf, float n);
 **		string.
 */
 void			ft_print_o_octal(t_printf *my_printf, unsigned long long n);
+void			ft_print_b_binary(t_printf *my_printf, unsigned long long n);
 /*
 ** FT_PRINT_S_STR - This function will be called by the ft_handler_s_str
 **		function and it will operate in the same manner as an FT_PUTSTR, which

@@ -32,6 +32,6 @@ void	ft_handler_convert(t_printf *my_printf, va_list printf_list)
 		ft_handler_p_pointer(my_printf, printf_list);
 	else if (my_printf->convert == 's')
 		ft_handler_s_str(my_printf, printf_list);
-	else if (my_printf->convert == '%')
+	else if (my_printf->convert == '%' || my_printf->convert == '\%')
 		ft_print_mod(my_printf);
 }

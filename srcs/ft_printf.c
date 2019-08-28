@@ -22,7 +22,7 @@ int	ft_printf(const char *parse_str, ...)
 	va_start(printf_list, (char *)parse_str);
 	while (parse_str[my_printf.i] != '\0')
 	{
-		if (parse_str[my_printf.i] == '%')
+		if (parse_str[my_printf.i] == '%' || parse_str[my_printf.i] == '\%')
 		{
 			my_printf.i += 1;
 			ft_convert(&my_printf, printf_list, (char *)parse_str);
