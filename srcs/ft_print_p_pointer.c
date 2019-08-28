@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 09:40:53 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/28 09:40:56 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/08/28 15:42:29 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,9 @@ void	ft_print_p_pointer(t_printf *my_printf, void *pointer)
 {
 	char	*str;
 
-	//printf("ft_print_p and the pointer is %lld\n", (long long)pointer);
-	str = ft_ltoa_base((long long)pointer, 16);
+	str = ft_ltoa_base((intmax_t)pointer, 16);
 	ft_flag_size(my_printf, ft_strlen(str));
 	my_printf->field_width -= 2;
-	//printf("print_p my_printf->convert = %c\n", my_printf->convert);
 	if (my_printf->convert == 'p')
 	{
 		ft_putstr("0x");

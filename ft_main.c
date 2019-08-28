@@ -87,13 +87,13 @@ int main()
 	//ft_printf("%lx\n", 4294967296);
 	//ft_printf("The binary for 5 is %b\n", 5);
 	//ft_printf("The binary for 42 is %B\n", 42);
-	ft_putendl("NOW WE WILL PRINT MEMORY ADDRESSES");
+	//ft_putendl("NOW WE WILL PRINT MEMORY ADDRESSES");
 	//void *my_mem = &my_integer;
-	printf("The memory address of 'my_integer' is = %p\n", &my_integer);
-	ft_printf("The memory address of 'my_integer' is = %p\n", &my_integer);
+	//printf("The memory address of 'my_integer' is = %p\n", &my_integer);
+	ft_printf("The memory address of 'my_integer' is = %P\n", &my_integer);
 	//printf("The memory address of 'my_integer' is = %p", &my_integer);
-	/*ft_printf("The memory address of 'my_ui is = %p\n", &my_ui);
-	ft_printf("The memory address of 'my_float' is = %p\n", &my_float);
+	ft_printf("The memory address of 'my_ui is = %p\n", &my_ui);
+	/*ft_printf("The memory address of 'my_float' is = %p\n", &my_float);
 	ft_printf("The memory address of 'my_double' is = %p\n", &my_double);
 	ft_printf("The memory address of 'my_char' is = %p\n", &my_char);
 	ft_printf("And finally the address of 'my_string' is %p\n", &my_string);*/
@@ -103,6 +103,18 @@ int main()
 	ft_putendl(fok);
 	m = ft_strchr_bool(fok, '\%');
 	ft_putnbr(m);*/
+	/*ft_printf("% 10.5d\n", 4242);
+	printf("% 10.5d\n", 4242);
+	ft_printf("%4.15d\n", 42);
+	printf("%4.15d\n", 42);
+	ft_printf("%05d\n", 42);
+	printf("%05d\n", 42);
+	ft_printf("%5d\n", 42);
+	printf("%5d\n", 42);*/
+
+	//ft_printf("%ld", -2147483648);
+//	 ft_printf("%lld", 9223372036854775807);
+
 	return 0;
 }
 /*

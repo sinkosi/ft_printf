@@ -25,7 +25,7 @@
 */
 # define UINT_MAX 4294967295
 # define FLAGS "hljz#0-+ ."
-# define PARSE "bBcCdDioOpsSuUxX\%"
+# define PARSE "bBcCdDioOpPsSuUxX\%"
 
 /*
 ** ************************************************************************ *
@@ -260,8 +260,8 @@ void			ft_print_f_float(t_printf *my_printf, float n);
 **		type string(char *) and update the return using the	FT_STRLEN of the
 **		string.
 */
-void			ft_print_o_octal(t_printf *my_printf, unsigned long long n);
-void			ft_print_b_binary(t_printf *my_printf, unsigned long long n);
+void			ft_print_o_octal(t_printf *my_printf, uintmax_t n);
+void			ft_print_b_binary(t_printf *my_printf, uintmax_t n);
 /*
 ** FT_PRINT_S_STR - This function will be called by the ft_handler_s_str
 **		function and it will operate in the same manner as an FT_PUTSTR, which
@@ -293,6 +293,6 @@ void			ft_flag_reset(t_printf *my_printf);
 void			ft_error(char *str);
 
 char			*ft_ltoa_printf(intmax_t nbr);
-char			*ft_ltoa_base(long long value, int base);
+char			*ft_ltoa_base(intmax_t value, int base);
 
 #endif

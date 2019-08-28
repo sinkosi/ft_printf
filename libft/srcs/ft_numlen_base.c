@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	ft_numlen_base(long long n, int base)
+int	ft_numlen_base(intmax_t n, int base)
 {
 	int	len;
 

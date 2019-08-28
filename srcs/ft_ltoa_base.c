@@ -34,7 +34,7 @@ static void	ft_table_ref(char *str, long long value, int digits, int base)
 	}
 }
 
-char		*ft_ltoa_base(long long value, int base)
+char		*ft_ltoa_base(intmax_t value, int base)
 {
 	char		*result;
 	long long	digits;
