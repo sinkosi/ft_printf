@@ -12,11 +12,11 @@
 
 #include "../includes/ft_printf.h"
 
-void	ft_print_u_unsigned_int(t_printf *my_printf, unsigned long long n)
+void	ft_print_u_unsigned_int(t_printf *my_printf, uintmax_t n)
 {
 	char	*str;
 
-	str = ft_itoa_base(n, 10);
+	str = ft_ltoa_printf(n);
 	ft_flag_size(my_printf, ft_strlen(str));
 	ft_flag_width(my_printf);
 	ft_flag_precision(my_printf, str);

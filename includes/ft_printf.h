@@ -271,12 +271,9 @@ void			ft_print_b_binary(t_printf *my_printf, uintmax_t n);
 **		struct is updated with the FT_STRLEN of the output string.
 */
 void			ft_print_s_str(t_printf *my_printf, char *str);
-void			ft_print_u_unsigned_int(t_printf *my_printf,
-					unsigned long long n);
-void			ft_print_x_hexadecimal(t_printf *my_printf,
-					unsigned long long n);
-void			ft_print_xc_hexadecimal(t_printf *my_printf,
-					unsigned long long n);
+void			ft_print_u_unsigned_int(t_printf *my_printf, uintmax_t n);
+void			ft_print_x_hexadecimal(t_printf *my_printf, uintmax_t n);
+void			ft_print_xc_hexadecimal(t_printf *my_printf, uintmax_t n);
 void			ft_print_p_pointer(t_printf *my_printf, void *pointer);
 void			ft_print_mod(t_printf *my_printf);
 

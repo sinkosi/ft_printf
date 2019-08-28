@@ -12,7 +12,7 @@
 
 #include "../includes/ft_printf.h"
 
-void	ft_print_xc_hexadecimal(t_printf *my_printf, unsigned long long n)
+void	ft_print_xc_hexadecimal(t_printf *my_printf, uintmax_t n)
 {
 	char	*str;
 

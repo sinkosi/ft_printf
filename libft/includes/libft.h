@@ -707,7 +707,7 @@ char			**ft_strsplit(char const *s, char c);
 ** FT_NUMLEN - This function takes an int n as an argument and returns
 **		the length of the number of digits as a result of size_t.
 */
-size_t			ft_numlen(int n);
+size_t			ft_numlen(intmax_t n);
 
 /*
 ** FT_ITOA - This function will allocate and return a fresh string ending
