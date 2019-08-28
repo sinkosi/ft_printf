@@ -20,6 +20,8 @@ void	ft_handler_convert(t_printf *my_printf, va_list printf_list)
 		ft_handler_c_char(my_printf, printf_list);
 	else if (my_printf->convert == 'o' || my_printf->convert == 'O')
 		ft_handler_o_octal(my_printf, printf_list);
+	else if (my_printf->convert == 'b' || my_printf->convert == 'B')
+		ft_handler_b_binary(my_printf, printf_list);
 	else if (my_printf->convert == 'u')
 		ft_handler_u_unsigned_int(my_printf, printf_list);
 	else if (my_printf->convert == 'x')
