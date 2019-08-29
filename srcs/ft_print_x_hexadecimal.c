@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 09:44:11 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/28 09:44:12 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/08/29 16:09:15 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static void	ft_print_x_hex_prefix(t_printf *my_printf, char *str)
 	}
 }
 
-void	ft_print_x_hexadecimal(t_printf *my_printf, uintmax_t n)
+void		ft_print_x_hexadecimal(t_printf *my_printf, uintmax_t n)
 {
 	char	*str;
 
@@ -37,17 +37,6 @@ void	ft_print_x_hexadecimal(t_printf *my_printf, uintmax_t n)
 		&& my_printf->flag_hash == 1)
 		ft_flag_width(my_printf);
 	ft_print_x_hex_prefix(my_printf, str);
-	/*if (str[0] != '0' && my_printf->flag_hash == 1 && my_printf->convert == 'X')
-	{
-		ft_putstr("0X");
-		my_printf->f_return += 2;
-	}
-	else if (str[0] != '0' && my_printf->flag_hash == 1 &&
-		my_printf->convert == 'x')
-	{
-		ft_putstr("0x");
-		my_printf->f_return += 2;
-	}*/
 	ft_flag_width(my_printf);
 	if (my_printf->convert == 'x')
 		str = ft_strlowcase(str);

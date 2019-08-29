@@ -25,7 +25,7 @@
 */
 # define UINT_MAX 4294967295
 # define FLAGS "hljz#0-+ ."
-# define PARSE "bBcCdDioOpPsSuUxX\%"
+# define PARSE "bBcCdDfFioOpPsSuUxX\%"
 
 /*
 ** ************************************************************************ *
@@ -209,14 +209,7 @@ void			ft_handler_u_unsigned_int(t_printf *my_printf,
 */
 void			ft_handler_x_hexadecimal(t_printf *my_printf,
 		va_list printf_list);
-/*
-** FT_HANDLER_XC_HEXADECIMAL - This handler is for hexadecimal conversion
-**		and it will check the integer that is parsed to it and call the print
-**		function that is appropriate for its data-type. The print will return
-**		uppercase output.
-*/
-void			ft_handler_xc_hexadecimal(t_printf *my_printf,
-		va_list printf_list);
+
 /*
 ** FT_HANDLER_P_POINTER - This is the handler for printing out a pointer.
 **		This code is very basic and similar code exists in libft. The handler
@@ -252,7 +245,7 @@ void			ft_print_d_int(t_printf *my_printf, intmax_t n);
 //NOT DONE
 void			ft_print_e_exponent(t_printf *my_printf, double n);
 //NOT DONE
-void			ft_print_f_float(t_printf *my_printf, float n);
+void			ft_print_f_float(t_printf *my_printf, double n);
 /*
 ** FT_PRINT_O_OCTAL - This function will be called by the ft_handler_o_octal
 **		function and print an octal number. The function will convert the
@@ -273,7 +266,7 @@ void			ft_print_b_binary(t_printf *my_printf, uintmax_t n);
 void			ft_print_s_str(t_printf *my_printf, char *str);
 void			ft_print_u_unsigned_int(t_printf *my_printf, uintmax_t n);
 void			ft_print_x_hexadecimal(t_printf *my_printf, uintmax_t n);
-void			ft_print_xc_hexadecimal(t_printf *my_printf, uintmax_t n);
+
 void			ft_print_p_pointer(t_printf *my_printf, void *pointer);
 void			ft_print_mod(t_printf *my_printf);
 
@@ -291,5 +284,11 @@ void			ft_error(char *str);
 
 char			*ft_ltoa_printf(intmax_t nbr);
 char			*ft_ltoa_base(intmax_t value, int base);
+
+void			ft_putwchar(wchar_t wc);
+void			ft_putwchar_fd(wchar_t wc, int fd);
+
+void			ft_putwstr(wchar_t *wstr);
+void			ft_putwstr_fd(wchar_t *wstr, int fd);
 
 #endif

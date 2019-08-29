@@ -112,13 +112,21 @@ int main()
 	ft_printf("%5d\n", 42);
 	printf("%5d\n", 42);*/
 
-	ft_printf("%ld\n", -2147483648);
+	/*ft_printf("%ld\n", -2147483648);
 	ft_printf("%lld\n", 9223372036854775807);
 	ft_printf("Large X %X\n", 42);
 	ft_printf("Large X & # %#X\n", 42);
 	ft_printf("small x %x\n", 42);
 	ft_printf("small x & # %#x\n", 42);
-
+	printf("What the f is D %f\n", 545.4524);
+	printf("%d\n", 0xE5);
+	printf("%C\n", 0xE5);
+	ft_printf("%c\n", 65);
+	ft_printf("%C\n", 229);
+	printf("This is a Capital s%S", "tring\n");
+	ft_printf("This is a Capital s%S", "tring\n");*/
+	printf("It is time to build floating point numbers!\n");
+	ft_printf("Letstry something %f\n", 45125.265);
 	return 0;
 }
 /*

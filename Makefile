@@ -80,23 +80,28 @@ SRCS_NAME	= ft_convert.c		\
 		  ft_handler_s_str.c	\
 		  ft_handler_u_unsigned_int.c	\
 		  ft_handler_x_hexadecimal.c	\
-		  ft_handler_xc_hexadecimal.c	\
+		  ft_handler_f_float.c	\
 		  ft_handler_convert.c			\
 		  ft_print_b_binary.c	\
 		  ft_print_c_char.c		\
 		  ft_print_d_int.c		\
 		  ft_printf.c			\
 		  ft_print_mod.c		\
+		  ft_print_f_float.c	\
 		  ft_print_o_octal.c	\
 		  ft_print_out.c		\
 		  ft_print_p_pointer.c	\
 		  ft_print_s_str.c		\
 		  ft_print_u_unsigned_int.c	\
 		  ft_print_x_hexadecimal.c	\
-		  ft_print_xc_hexadecimal.c	\
 		  ft_ltoa_printf.c		\
 		  ft_ltoa_base.c		\
-		  ft_ultoa_printf.c
+		  ft_ultoa_printf.c		\
+		  ft_putwchar.c			\
+		  ft_putwchar_fd.c		\
+		  ft_putwstr.c			\
+		  ft_putwstr_fd.c		\
+		  #ft_print_xc_hexadecimal.c	
 
 OBJ		= $(addprefix $(OBJ_PATH)/, $(SRCS_NAME:%.c=%.o))
 ################################################
