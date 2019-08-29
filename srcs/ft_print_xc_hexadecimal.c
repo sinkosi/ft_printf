@@ -17,6 +17,7 @@ void	ft_print_xc_hexadecimal(t_printf *my_printf, uintmax_t n)
 	char	*str;
 
 	str = ft_ltoa_base(n, 16);
+	printf("WHAT IS THE my_printf->convert = %c\n", my_printf->convert);
 	ft_flag_size(my_printf, ft_strlen(str));
 	if (my_printf->flag_minus == 0 && my_printf->flag_zero == 0
 		&& my_printf->flag_hash == 1)

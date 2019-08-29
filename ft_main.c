@@ -114,6 +114,10 @@ int main()
 
 	ft_printf("%ld\n", -2147483648);
 	ft_printf("%lld\n", 9223372036854775807);
+	ft_printf("Large X %X\n", 42);
+	ft_printf("Large X & # %#X\n", 42);
+	ft_printf("small x %x\n", 42);
+	ft_printf("small x & # %#x\n", 42);
 
 	return 0;
 }

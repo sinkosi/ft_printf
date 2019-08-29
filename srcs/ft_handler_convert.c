@@ -24,10 +24,10 @@ void	ft_handler_convert(t_printf *my_printf, va_list printf_list)
 		ft_handler_b_binary(my_printf, printf_list);
 	else if (my_printf->convert == 'u' || my_printf->convert == 'U')
 		ft_handler_u_unsigned_int(my_printf, printf_list);
-	else if (my_printf->convert == 'x')
+	else if (my_printf->convert == 'x' || my_printf->convert == 'X')
 		ft_handler_x_hexadecimal(my_printf, printf_list);
-	else if (my_printf->convert == 'X')
-		ft_handler_xc_hexadecimal(my_printf, printf_list);
+	//else if (my_printf->convert == 'X')
+	//	ft_handler_xc_hexadecimal(my_printf, printf_list);
 	else if (my_printf->convert == 'p' || my_printf->convert == 'P')
 		ft_handler_p_pointer(my_printf, printf_list);
 	else if (my_printf->convert == 's')

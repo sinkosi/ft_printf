@@ -12,6 +12,21 @@
 
 #include "../includes/ft_printf.h"
 
+static void	ft_print_x_hex_prefix(t_printf *my_printf, char *str)
+{
+	if (str[0] != '0' && my_printf->flag_hash == 1 && my_printf->convert == 'X')
+	{
+		ft_putstr("0X");
+		my_printf->f_return += 2;
+	}
+	else if (str[0] != '0' && my_printf->flag_hash == 1 &&
+		my_printf->convert == 'x')
+	{
+		ft_putstr("0x");
+		my_printf->f_return += 2;
+	}
+}
+
 void	ft_print_x_hexadecimal(t_printf *my_printf, uintmax_t n)
 {
 	char	*str;
@@ -21,13 +36,21 @@ void	ft_print_x_hexadecimal(t_printf *my_printf, uintmax_t n)
 	if (my_printf->flag_minus == 0 && my_printf->flag_zero == 0
 		&& my_printf->flag_hash == 1)
 		ft_flag_width(my_printf);
-	if (str[0] != '0' && my_printf->flag_hash == 1)
+	ft_print_x_hex_prefix(my_printf, str);
+	/*if (str[0] != '0' && my_printf->flag_hash == 1 && my_printf->convert == 'X')
+	{
+		ft_putstr("0X");
+		my_printf->f_return += 2;
+	}
+	else if (str[0] != '0' && my_printf->flag_hash == 1 &&
+		my_printf->convert == 'x')
 	{
 		ft_putstr("0x");
 		my_printf->f_return += 2;
-	}
+	}*/
 	ft_flag_width(my_printf);
-	str = ft_strlowcase(str);
+	if (my_printf->convert == 'x')
+		str = ft_strlowcase(str);
 	ft_putstr(str);
 	my_printf->f_return += ft_strlen(str);
 	if (my_printf->field_width > 0)
