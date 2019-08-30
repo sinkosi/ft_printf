@@ -1010,7 +1010,7 @@ int				ft_factorial(int nb);
 **		to a number. A power lower than 0, returns 0. Overflows are not
 **		handled.
 */
-int				ft_power(int nb, int power);
+intmax_t		ft_power(intmax_t nb, int power);
 
 /*
 ** FT_FIBONACCI - This function returns the n-th element of the Fibonacci

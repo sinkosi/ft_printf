@@ -90,9 +90,9 @@ int main()
 	//ft_putendl("NOW WE WILL PRINT MEMORY ADDRESSES");
 	//void *my_mem = &my_integer;
 	//printf("The memory address of 'my_integer' is = %p\n", &my_integer);
-	ft_printf("The memory address of 'my_integer' is = %P\n", &my_integer);
+	//ft_printf("The memory address of 'my_integer' is = %P\n", &my_integer);
 	//printf("The memory address of 'my_integer' is = %p", &my_integer);
-	ft_printf("The memory address of 'my_ui is = %p\n", &my_ui);
+	//ft_printf("The memory address of 'my_ui is = %p\n", &my_ui);
 	/*ft_printf("The memory address of 'my_float' is = %p\n", &my_float);
 	ft_printf("The memory address of 'my_double' is = %p\n", &my_double);
 	ft_printf("The memory address of 'my_char' is = %p\n", &my_char);
@@ -125,8 +125,18 @@ int main()
 	ft_printf("%C\n", 229);
 	printf("This is a Capital s%S", "tring\n");
 	ft_printf("This is a Capital s%S", "tring\n");*/
-	printf("It is time to build floating point numbers!\n");
-	ft_printf("Letstry something %f\n", 45125.265);
+	/*printf("It is time to build floating point numbers!\n");
+	ft_printf("Letstry something %f\n", 45125.265);*/
+	/*printf("power 2 on ft_power with 5 is %jd\n", ft_power(2, 5));
+	int r = ft_power_ten(0.000005, 6);
+	printf("This is r %d\n", r);
+	ft_printf("This is r with my printf %05d\n", r);*/
+
+	ft_printf("This is a float number test \n%lf\n", 452.365);
+	ft_printf("This is a float number test \n%lf\n", -5452.365);
+	printf("This is a float L number test \n%Lf\n", -5452.365456789L);
+	ft_printf("This is a float L number test \n%Lf\n", -5452.365456789L);
+	ft_printf("This is a float precision test \n%.3lf\n", 452.3651);
 	return 0;
 }
 /*

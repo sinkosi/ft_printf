@@ -290,5 +290,6 @@ void			ft_putwchar_fd(wchar_t wc, int fd);
 
 void			ft_putwstr(wchar_t *wstr);
 void			ft_putwstr_fd(wchar_t *wstr, int fd);
+intmax_t		ft_power_ten(double nb, int power);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 11:32:34 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/28 11:33:17 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/08/30 12:46:16 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,32 @@
 
 void	ft_print_f_float(t_printf *my_printf, double n)
 {
-	char	*str;
-	intmax_t a;
-	intmax_t b;
+	char		*str;
+	char		*mantissa;
+	intmax_t	a;
 
 	a = n;
-	printf("over here and %jd\n over there", a);
 	str = ft_ltoa_base(n, 10);
 	n -= a;
-	a = ft_power(n, 6);
-	/*
-	Dear Sibo, what you must do now is create a function that will take a number
-	and multiply it to the power of ten.
-	Then you will want to cast that number back into the intmax. This will allow
-	you to then hold the radix. Then you will cast that and join it with a dot.
-	*/
-	printf("WHAT IS THE my_printf->convert = %c\n", my_printf->convert);
+	if (my_printf->prec_width <= 0)
+		my_printf->prec_width = 6;
+	a = ft_power_ten(ft_fabs(n), my_printf->prec_width);
+	mantissa = ft_ltoa_base(a, 10);
 	ft_flag_size(my_printf, ft_strlen(str));
 	if (my_printf->flag_minus == 0 && my_printf->flag_zero == 0
 		&& my_printf->flag_hash == 1)
 		ft_flag_width(my_printf);
-	if (str[0] != '0' && my_printf->flag_hash == 1)
-	{
-		ft_putstr("0X");
-		my_printf->f_return += 2;
-	}
+	ft_flag_size(my_printf, ft_strlen(mantissa));
+	if (my_printf->flag_minus == 0 && my_printf->flag_zero == 0
+		&& my_printf->flag_hash == 1)
+		ft_flag_width(my_printf);
 	ft_flag_width(my_printf);
 	ft_putstr(str);
 	my_printf->f_return += ft_strlen(str);
+	ft_putstr(".");
+	my_printf->f_return += 1;
+	ft_putstr(mantissa);
+	my_printf->f_return += ft_strlen(mantissa);
 	if (my_printf->field_width > 0)
 		ft_flag_width(my_printf);
 	ft_strdel(&str);
