@@ -33,6 +33,8 @@ void	ft_flag_set(t_printf *my_printf, char *str)
 		my_printf->h += 1;
 	else if (str[my_printf->i] == 'l')
 		my_printf->l += 1;
+	else if (str[my_printf->i] == 'L')
+		my_printf->L = 1;
 	else if (str[my_printf->i] == 'j')
 		my_printf->j = 1;
 	else if (str[my_printf->i] == 'z')

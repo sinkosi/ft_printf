@@ -88,6 +88,7 @@ SRCS_NAME	= ft_convert.c		\
 		  ft_printf.c			\
 		  ft_print_mod.c		\
 		  ft_print_f_float.c	\
+		  ft_print_lf_float.c	\
 		  ft_print_o_octal.c	\
 		  ft_print_out.c		\
 		  ft_print_p_pointer.c	\
