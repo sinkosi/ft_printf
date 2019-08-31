@@ -293,5 +293,6 @@ void			ft_putwstr(wchar_t *wstr);
 void			ft_putwstr_fd(wchar_t *wstr, int fd);
 intmax_t		ft_power_ten(double nb, int power);
 void			ft_print_lf_float(t_printf *my_printf, long double n);
+int     ft_round_bool(double nbr);
 
 #endif

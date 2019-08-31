@@ -103,6 +103,7 @@ SRCS_NAME	= ft_convert.c		\
 		  ft_putwstr.c			\
 		  ft_putwstr_fd.c		\
 		  ft_power_ten.c		\
+		  ft_round_bool.c		\
 		  #ft_print_xc_hexadecimal.c	
 
 OBJ		= $(addprefix $(OBJ_PATH)/, $(SRCS_NAME:%.c=%.o))
