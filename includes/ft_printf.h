@@ -15,7 +15,7 @@
 # include "../libft/includes/libft.h"
 # include <wchar.h>
 # include <stdarg.h>
-# include <stdint.h>
+# include <inttypes.h>
 #include <stdio.h>
 
 /*
