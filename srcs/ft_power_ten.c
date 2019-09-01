@@ -14,14 +14,21 @@
 
 intmax_t	ft_power_ten(double nb, int power)
 {
-	intmax_t ten;
+	intmax_t	ten;
+	int			i;
 
 	ten = 10;
+	i = 0;
 	if (power < 0)
 		return (-1);
 	else if (power == 0)
 		return (1);
-	else
-		ten = ft_power(ten, power);
-	return (nb * ten);
+	while (power > 1)
+	{
+		ten *= 10;
+		power--;
+		if (power == 1)
+			i = ft_round_bool(nb * ten);
+	}
+	return ((nb * ten) + i);
 }
