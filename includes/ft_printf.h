@@ -16,7 +16,6 @@
 # include <wchar.h>
 # include <stdarg.h>
 # include <inttypes.h>
-#include <stdio.h>
 
 /*
 ** ************************************************************************ *
@@ -71,7 +70,7 @@ typedef struct	s_printf
 	int			i;
 	int			h;
 	int			l;
-	int			L;
+	int			lc;
 	int			j;
 	int			z;
 	char		convert;
@@ -140,6 +139,7 @@ typedef struct	s_printf
 **									FLAG FUNCTIONS							*
 ** ************************************************************************	*
 */
+
 /*
 ** FT_FLAG_SIZE -
 */
@@ -166,6 +166,7 @@ void			ft_flag_space(t_printf *my_printf);
 **		the string remainder on 0++;
 */
 void			ft_handler_c_char(t_printf *my_printf, va_list printf_list);
+
 /*
 ** FT_HANDLER_D_INT - This is the handler for parsing integers. The function
 **		does not only look at data types of type 'int' only. It will look for
@@ -173,7 +174,9 @@ void			ft_handler_c_char(t_printf *my_printf, va_list printf_list);
 */
 void			ft_handler_d_int(t_printf *my_printf, va_list printf_list);
 
-// NOT MADE YET
+/*
+** FT_HANDLER_E_EXPONENT - This function has not been made.
+*/
 void			ft_handler_e_exponent(t_printf *my_printf, va_list printf_list);
 //NOT MADE YET
 void			ft_handler_f_float(t_printf *my_printf, va_list printf_list);
@@ -236,6 +239,7 @@ void			ft_handler_convert(t_printf *my_printf, va_list printf_list);
 **		variable.
 */
 void			ft_print_c_char(t_printf *my_printf, int c);
+
 /*
 ** FT_PRINT_D_INT - This function will be called by the ft_handler_d_int
 **		function and print an integer and update the return using the STRLEN
@@ -243,10 +247,13 @@ void			ft_print_c_char(t_printf *my_printf, int c);
 **		occurring.
 */
 void			ft_print_d_int(t_printf *my_printf, intmax_t n);
+
 //NOT DONE
 void			ft_print_e_exponent(t_printf *my_printf, double n);
+
 //NOT DONE
 void			ft_print_f_float(t_printf *my_printf, double n);
+
 /*
 ** FT_PRINT_O_OCTAL - This function will be called by the ft_handler_o_octal
 **		function and print an octal number. The function will convert the
@@ -255,7 +262,9 @@ void			ft_print_f_float(t_printf *my_printf, double n);
 **		string.
 */
 void			ft_print_o_octal(t_printf *my_printf, uintmax_t n);
+
 void			ft_print_b_binary(t_printf *my_printf, uintmax_t n);
+
 /*
 ** FT_PRINT_S_STR - This function will be called by the ft_handler_s_str
 **		function and it will operate in the same manner as an FT_PUTSTR, which
@@ -293,6 +302,6 @@ void			ft_putwstr(wchar_t *wstr);
 void			ft_putwstr_fd(wchar_t *wstr, int fd);
 intmax_t		ft_power_ten(double nb, int power);
 void			ft_print_lf_float(t_printf *my_printf, long double n);
-int     ft_round_bool(double nbr);
+int				ft_round_bool(double nbr);
 
 #endif

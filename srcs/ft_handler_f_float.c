@@ -29,7 +29,7 @@ void		ft_handler_f_float(t_printf *my_printf, va_list printf_list)
 		ft_print_f_float(my_printf, va_arg(printf_list, double));
 	else if (my_printf->l == 2)
 		ft_print_f_float(my_printf, va_arg(printf_list, double));
-	else if (my_printf->L == 1)
+	else if (my_printf->lc == 1)
 		ft_print_f_float(my_printf, va_arg(printf_list, long double));
 	else if (my_printf->j == 1)
 		ft_print_f_float(my_printf, va_arg(printf_list, intmax_t));
