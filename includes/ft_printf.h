@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 10:51:35 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/08/26 14:23:06 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/09/01 12:12:55 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -178,7 +178,12 @@ void			ft_handler_d_int(t_printf *my_printf, va_list printf_list);
 ** FT_HANDLER_E_EXPONENT - This function has not been made.
 */
 void			ft_handler_e_exponent(t_printf *my_printf, va_list printf_list);
-//NOT MADE YET
+
+/*
+** FT_HANDLER_F_FLOAT - This is the function that handles floating point input.
+**		The standard number is parsed as a Double or a LONG Double. The
+**		handler parses the %f character with Flags such as l, ll or L & j.
+*/
 void			ft_handler_f_float(t_printf *my_printf, va_list printf_list);
 /*
 ** FT_HANDLER_O_OCTAL - This is the handler for octal strings. The function
@@ -248,10 +253,20 @@ void			ft_print_c_char(t_printf *my_printf, int c);
 */
 void			ft_print_d_int(t_printf *my_printf, intmax_t n);
 
-//NOT DONE
+/*
+** FT_PRINT_E_EXPONENT - This function has not been done.
+*/
 void			ft_print_e_exponent(t_printf *my_printf, double n);
 
-//NOT DONE
+/*
+** FT_PRINT_F_FLOAT - This function is called by the ft_handler_f_float.
+**		It works by taking the data-type passed to it. Either a float, double
+**		or a long double. It works by casting the significand to one string.
+**		It will then use a function that calculates the mantissa beyond the
+**		radix and storing it in a second string. It then outputs each string
+**		with the radix as the seperator. It takes the length of the output
+**		and updates the value in the struct 'f_return'.
+*/
 void			ft_print_f_float(t_printf *my_printf, double n);
 
 /*
