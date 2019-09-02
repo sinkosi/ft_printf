@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/29 14:56:45 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/08/29 16:06:41 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/09/02 13:49:00 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void	ft_putchar_wfd(int n, int fd)
 	write(fd, &n, 1);
 }
 
-void	ft_putwchar_fd(wchar_t wc, int fd)
+void		ft_putwchar_fd(wchar_t wc, int fd)
 {
 	if (wc <= 127)
 		ft_putchar_wfd(wc, fd);

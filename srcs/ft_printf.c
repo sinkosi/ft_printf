@@ -33,3 +33,25 @@ int	ft_printf(const char *parse_str, ...)
 	va_end(printf_list);
 	return (my_printf.f_return);
 }
+
+int	ft_dprintf(int fd, const char *parse_str, ...)
+{
+	t_printf	my_printf;
+	va_list		printf_list;
+
+	my_printf.i = 0;
+	my_printf.f_return = 0;
+	va_start(printf_list, (char *)parse_str);
+	while (parse_str[my_printf.i] != '\0')
+	{
+		if (parse_str[my_printf.i] == '%' || parse_str[my_printf.i] == '\%')
+		{
+			my_printf.i += 1;
+			ft_convert_fd(&my_printf, printf_list, (char *)parse_str, fd);
+		}
+		else
+			ft_print_out_fd(&my_printf, (char *)parse_str, fd);
+	}
+	va_end(printf_list);
+	return (my_printf.f_return);
+}

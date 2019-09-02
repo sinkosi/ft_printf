@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 09:43:53 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/28 09:43:55 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/09/02 13:52:41 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,15 @@ void	ft_flag_space(t_printf *my_printf)
 	if (my_printf->flag_space == 1 && my_printf->flag_plus == 0)
 	{
 		ft_putchar(' ');
+		my_printf->f_return += 1;
+	}
+}
+
+void	ft_flag_space_fd(t_printf *my_printf, int fd)
+{
+	if (my_printf->flag_space == 1 && my_printf->flag_plus == 0)
+	{
+		ft_putchar_fd(' ', fd);
 		my_printf->f_return += 1;
 	}
 }

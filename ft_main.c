@@ -127,7 +127,8 @@ int main()
 	ft_printf("%C\n", 229);
 	ft_printf("%C\n", 0345);
 	ft_printf("%C\n", 0xE5);
-	//printf("This is a Capital s%S", "tring\n");
+	int caps[] = {229, 188, 65, 229};
+	ft_printf("This is a Capital %S", caps);
 	//ft_printf("This is a Capital s%S", "tring\n");
 	/*printf("It is time to build floating point numbers!\n");
 	ft_printf("Letstry something %f\n", 45125.265);*/

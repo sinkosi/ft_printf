@@ -53,4 +53,5 @@ void		ft_print_f_float(t_printf *my_printf, double n)
 	if (my_printf->field_width > 0)
 		ft_flag_width(my_printf);
 	ft_strdel(&str);
+	ft_strdel(&mantissa);
 }

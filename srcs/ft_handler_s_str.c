@@ -15,6 +15,17 @@
 void	ft_handler_s_str(t_printf *my_printf, va_list printf_list)
 {
 	ft_flag_check(my_printf);
-	if (my_printf->l != 1)
+	if (my_printf->l != 1 && my_printf->convert == 's')
 		ft_print_s_str(my_printf, va_arg(printf_list, char *));
+	else if (my_printf->convert == 'S')
+		ft_print_ws_str(my_printf, va_arg(printf_list, wchar_t *));
+}
+
+void	ft_handler_s_str_fd(t_printf *my_printf, va_list printf_list, int fd)
+{
+	ft_flag_check(my_printf);
+	if (my_printf->l != 1 && my_printf->convert == 's')
+		ft_print_s_str_fd(my_printf, va_arg(printf_list, char *), fd);
+	else if (my_printf->convert == 'S')
+		ft_print_ws_str_fd(my_printf, va_arg(printf_list, wchar_t *), fd);
 }
