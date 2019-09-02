@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_handler_f_float_fd.c                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/09/02 14:12:22 by sinkosi           #+#    #+#             */
+/*   Updated: 2019/09/02 14:12:40 by sinkosi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
@@ -11,7 +22,8 @@ static void	ft_handler_x_char(t_printf *my_printf, unsigned char c, int fd)
 	ft_print_f_float_fd(my_printf, c, fd);
 }
 
-void		ft_handler_f_float_fd(t_printf *my_printf, va_list printf_list, int fd)
+void		ft_handler_f_float_fd(t_printf *my_printf,
+		va_list printf_list, int fd)
 {
 	ft_flag_check(my_printf);
 	if (my_printf->l == 1)

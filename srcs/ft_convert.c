@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 16:20:01 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/08/07 08:41:21 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/09/02 14:14:03 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,8 @@ void	ft_convert(t_printf *my_printf, va_list printf_list, char *str)
 		return ;
 }
 
-void	ft_convert_fd(t_printf *my_printf, va_list printf_list, char *str, int fd)
+void	ft_convert_fd(t_printf *my_printf, va_list printf_list,
+		char *str, int fd)
 {
 	ft_flag_reset(my_printf);
 	while (str[my_printf->i] != '\0' &&
