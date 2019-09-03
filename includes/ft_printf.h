@@ -16,13 +16,12 @@
 # include <wchar.h>
 # include <stdarg.h>
 # include <inttypes.h>
-
+#include <stdio.h>
 /*
 ** ************************************************************************ *
 **									MACROS									*
 ** ************************************************************************	*
 */
-# define UINT_MAX 4294967295
 # define FLAGS "hlLjz#0-+ ."
 # define PARSE "bBcCdDfFioOpPsSuUxX\%"
 
@@ -32,13 +31,13 @@
 ** ************************************************************************	*
 */
 
-# define RESET	"\033[0m"
-# define RED	"\033[31m"
-# define GREEN	"\033[32m"
-# define YELLOW	"\033[33m"
-# define BLUE	"\033[34m"
-# define MAGENTA "\033[35m"
-# define CYAN	"\033[36m"
+# define M_RESET	"\033[0m"
+# define M_RED	"\033[31m"
+# define M_GREEN	"\033[32m"
+# define M_YELLOW	"\033[33m"
+# define M_BLUE	"\033[34m"
+# define M_MAGENTA "\033[35m"
+# define M_CYAN	"\033[36m"
 
 /*
 ** ************************************************************************	*
