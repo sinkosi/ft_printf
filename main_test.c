@@ -79,22 +79,22 @@ int main(int argc, char **argv)
 
 	//POINTERS
 	ft_putendl("\nTEST 9: %p Pointers");
-	/*ft_printf("The memory address of 'my_ui is = %p\n", &my_ui);
-	ft_printf("The memory address of 'my_float' is = %p\n", &my_float);
-	ft_printf("The memory address of 'my_double' is = %p\n", &my_double);
-	ft_printf("The memory address of 'my_char \"a\"' is = %p\n", &a);
-	ft_printf("And finally the address of 'str' is %p\n", &str);*/
+	ft_printf("The memory address of 'my_ui is = %P\n", &my_ui);
+	ft_printf("The memory address of 'my_float' is = %P\n", &my_float);
+	ft_printf("The memory address of 'my_double' is = %P\n", &my_double);
+	ft_printf("The memory address of 'my_char \"a\"' is = %P\n", &a);
+	ft_printf("And finally the address of 'str' is %P\n", &str);
 	
 	//WIDE-CHAR
 	ft_putendl("\nTEST 10: %C Wide-Char");
 	printf("%d\n", 0xE5);
 	printf("%C\n", 0xE5);
-	ft_printf("%c\n", 65);
-	ft_printf("%C\n", 188);
-	ft_printf("%C\n", 245);
-	ft_printf("%C\n", 229);
-	ft_printf("%C\n", 0345);
-	ft_printf("%C\n", 0xE5);
+	ft_printf("This is the output when passed int 65:\t%C\n", 65);
+	ft_printf("This is the output when passed int 188:\t%C\n", 188);
+	ft_printf("This is the output when passed int 245:\t%C\n", 245);
+	ft_printf("This is the output when passed int 229:\t%C\n", 229);
+	ft_printf("This is the output when passed oct 345:\t%C\n", 0345);
+	ft_printf("This is the output when passed hex xE5:\t%C\n", 0xE5);
 
 	//WIDE-STR
 	ft_putendl("\nTEST 10: %C Wide-Str");
