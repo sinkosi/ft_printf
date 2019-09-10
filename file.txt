@@ -14,7 +14,7 @@ Please enter your :Username
 Pass string by    :words
 Test field width  :      Field is?!
 Now left-alignment:On the left?   !
-Check precision to :Shorte         !
+Check precision to:Shorte         !
 th is a string
    th is a string
 
@@ -53,17 +53,17 @@ This is a float L number test -5452.365457
 This is a float precision test 452.365
 
 TEST 8: %b Binary
-The binary for 5 is 101
+The binary for  5 is 101
 The binary for 42 is 101010
 The binary for 42 is 101010
 The binary for 42 is 101011110000
 
 TEST 9: %p Pointers
-The memory address of 'my_ui is = 0X7FFEEB6439D0
-The memory address of 'my_float' is = 0X7FFEEB6439CC
-The memory address of 'my_double' is = 0X7FFEEB6439C0
-The memory address of 'my_char "a"' is = 0X7FFEEB6439E7
-And finally the address of 'str' is 0X7FFEEB6439D8
+The memory address of 'my_ui is = 0X7FFEE243A9D0
+The memory address of 'my_float' is = 0X7FFEE243A9CC
+The memory address of 'my_double' is = 0x7ffee243a9c0
+The memory address of 'my_char "a"' is = 0X7FFEE243A9E7
+And finally the address of 'str' is 0x7ffee243a9d8
 
 TEST 10: %C Wide-Char
 This is the output when passed int 65:	A

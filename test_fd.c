@@ -24,7 +24,7 @@ int main(void)
 	ft_dprintf(file, "Pass string by    :%s\n", "words");
 	ft_dprintf(file, "Test field width  :%15s!\n", "Field is?");
 	ft_dprintf(file, "Now left-alignment:%-15s!\n", "On the left?");
-	ft_dprintf(file, "Check precision to :%-15.6s!\n", "Shortened");
+	ft_dprintf(file, "Check precision to:%-15.6s!\n", "Shortened");
 	ft_dprintf(file, "%.2s is a string\n", "this");
 	ft_dprintf(file, "%5.2s is a string\n", "this");
 
@@ -50,7 +50,7 @@ int main(void)
 
 	//Unsigned Int
 	ft_putendl_fd("\nTEST 5: %u Unsigned Int", file);
-	ft_dprintf(file, "Unsigned integer: %U\n", my_ui);
+	ft_dprintf(file, "Unsigned integer: %u\n", my_ui);
   	ft_dprintf(file, "Unsigned integer: %U\n", (my_ui * 10));
 	//Check this stuff out
 
@@ -74,18 +74,18 @@ int main(void)
 
 	//BINARY
 	ft_putendl_fd("\nTEST 8: %b Binary", file);
-	ft_dprintf(file, "The binary for 5 is %b\n", 5);
+	ft_dprintf(file, "The binary for  5 is %b\n", 5);
 	ft_dprintf(file, "The binary for 42 is %B\n", 42);
 	ft_dprintf(file, "The binary for 42 is %B\n", -42);
-	ft_dprintf(file, "The binary for 42 is %B\n", 2800);
+	ft_dprintf(file, "The binary for 42 is %b\n", 2800);
 
 	//POINTERS
 	ft_putendl_fd("\nTEST 9: %p Pointers", file);
 	ft_dprintf(file, "The memory address of 'my_ui is = %P\n", &my_ui);
 	ft_dprintf(file, "The memory address of 'my_float' is = %P\n", &my_float);
-	ft_dprintf(file, "The memory address of 'my_double' is = %P\n", &my_double);
+	ft_dprintf(file, "The memory address of 'my_double' is = %p\n", &my_double);
 	ft_dprintf(file, "The memory address of 'my_char \"a\"' is = %P\n", &a);
-	ft_dprintf(file, "And finally the address of 'str' is %P\n", &str);
+	ft_dprintf(file, "And finally the address of 'str' is %p\n", &str);
 	
 	//WIDE-CHAR
 	ft_putendl_fd("\nTEST 10: %C Wide-Char", file);
