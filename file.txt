@@ -1,0 +1,85 @@
+Hello file by fprintf over_write...
+This is the Main for testing ft_printf
+
+TEST 1: %c CHAR
+We will pass the char A by variable :a
+Now we pass the char by declaration :b
+Watch as I pass the char by integer :C
+we will pass the value by function  :d
+The next thing is field width       :    E!
+Now we will left align our output   :F    !
+
+TEST 2: %s STRINGS
+Please enter your :Username
+Pass string by    :words
+Test field width  :      Field is?!
+Now left-alignment:On the left?   !
+Check precision to :Shorte         !
+th is a string
+   th is a string
+
+TEST 3: %d & %i Decimals & Integers
+Width(10) and precision( 5):	|     04242|
+Width( 4) and precision(15):	|000000000000042|
+Width(05) and precision( 0):	|00042|
+Width( 5) and precision( 0):	|   42|
+Int min test (long): -2147483648
+Long max test (long long): 9223372036854775807
+
+TEST 4: %o Octals
+Octal| Width(-5) & precision(10):	|0000004704|
+Octal| Width(10) & precision( 5):	|04704     |
+Octal| Width(-05) & precision( ):	|4704 |
+Octal| Width( 6) with hash & -  :	|04704 |
+
+TEST 5: %u Unsigned Int
+Unsigned integer: 230
+Unsigned integer: 2300
+
+TEST 6: %x Hexadecimal
+2a
+2A
+ffffffd6
+FFFFFFD6
+ffffffff
+ffffffff
+0X2A
+0xffffffd6
+
+TEST 7: %f Float
+This is a float number test 452.365000
+This is a float number test -5452.365000
+This is a float L number test -5452.365457
+This is a float precision test 452.365
+
+TEST 8: %b Binary
+The binary for 5 is 101
+The binary for 42 is 101010
+The binary for 42 is 101010
+The binary for 42 is 101011110000
+
+TEST 9: %p Pointers
+The memory address of 'my_ui is = 0X7FFEEB6439D0
+The memory address of 'my_float' is = 0X7FFEEB6439CC
+The memory address of 'my_double' is = 0X7FFEEB6439C0
+The memory address of 'my_char "a"' is = 0X7FFEEB6439E7
+And finally the address of 'str' is 0X7FFEEB6439D8
+
+TEST 10: %C Wide-Char
+This is the output when passed int 65:	A
+This is the output when passed int 188:	¼
+This is the output when passed int 245:	õ
+This is the output when passed int 229:	å
+This is the output when passed oct 345:	å
+This is the output when passed hex xE5:	å
+
+TEST 10: %C Wide-Str
+This is a Wide-Str å¼Aå and it's cool
+
+TEST OF THE EPIC, The Coup-De-Gras - COLOUR
+This should [31mprint in [0mRED!
+This should [32mprint in [0mGREEN!
+This should [33mprint in [0mYELLOW!
+This should [34mprint in [0mBLUE!
+This should [35mprint in [0mMAGENTA!
+This should [36mprint in [0mCYAN!
