@@ -28,7 +28,7 @@ void	ft_flag_precision(t_printf *my_printf, char *str)
 		my_printf->f_return += 1;
 	}
 	if (c == 'i' || c == 'd' || c == 'x' || c == 'X' || c == 'o' ||
-			c == 'p' || c == 'u')
+			c == 'p' || c == 'u' || c == 'U')
 		while (my_printf->prec_width > 0)
 		{
 			ft_putchar('0');
@@ -49,7 +49,7 @@ void	ft_flag_precision_fd(t_printf *my_printf, char *str, int fd)
 		my_printf->f_return += 1;
 	}
 	if (c == 'i' || c == 'd' || c == 'x' || c == 'X' || c == 'o' ||
-			c == 'p' || c == 'u')
+			c == 'p' || c == 'u' || c == 'U')
 		while (my_printf->prec_width > 0)
 		{
 			ft_putchar_fd('0', fd);

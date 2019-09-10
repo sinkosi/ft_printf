@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 10:51:35 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/09/02 13:39:57 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/09/10 11:57:28 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <wchar.h>
 # include <stdarg.h>
 # include <inttypes.h>
-#include <stdio.h>
+
 /*
 ** ************************************************************************ *
 **									MACROS									*
@@ -308,6 +308,7 @@ void			ft_flag_reset(t_printf *my_printf);
 void			ft_error(char *str);
 
 char			*ft_ltoa_printf(intmax_t nbr);
+char			*ft_ultoa(uintmax_t nbr, int base);
 char			*ft_ltoa_base(intmax_t value, int base);
 
 void			ft_putwchar(wchar_t wc);
@@ -360,6 +361,8 @@ void			ft_handler_c_char_fd(t_printf *my_printf, va_list printf_list,
 		int fd);
 void			ft_handler_d_int_fd(t_printf *my_printf, va_list printf_list,
 		int fd);
+void			ft_handler_f_float_fd(t_printf *my_printf,
+		va_list printf_list, int fd);
 
 void			ft_handler_o_octal_fd(t_printf *my_printf, va_list printf_list,
 		int fd);
@@ -367,6 +370,9 @@ void			ft_handler_p_pointer_fd(t_printf *my_printf,
 		va_list printf_listi, int fd);
 void			ft_handler_s_str_fd(t_printf *my_printf, va_list printf_list,
 		int fd);
+void			ft_handler_x_hexadecimal_fd(t_printf *my_printf,
+		va_list printf_list, int fd);
+
 void			ft_handler_u_unsigned_int_fd(t_printf *my_printf,
 		va_list printf_list, int fd);
 

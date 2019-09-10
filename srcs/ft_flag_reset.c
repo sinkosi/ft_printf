@@ -22,8 +22,10 @@ void	ft_flag_reset(t_printf *my_printf)
 	my_printf->flag_zero = 0;
 	my_printf->field_width = 0;
 	my_printf->precision = 0;
+	my_printf->prec_width = 0;
 	my_printf->h = 0;
 	my_printf->l = 0;
+	my_printf->lc = 0;
 	my_printf->j = 0;
 	my_printf->z = 0;
 }

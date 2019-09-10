@@ -82,7 +82,9 @@ SRCS_NAME	= ft_convert.c		\
 		  ft_handler_p_pointer.c\
 		  ft_handler_s_str.c	\
 		  ft_handler_u_unsigned_int.c	\
+		  ft_handler_u_unsigned_int_fd.c	\
 		  ft_handler_x_hexadecimal.c	\
+		  ft_handler_x_hexadecimal_fd.c	\
 		  ft_handler_f_float.c	\
 		  ft_handler_f_float_fd.c		\
 		  ft_handler_convert.c			\
@@ -109,8 +111,7 @@ SRCS_NAME	= ft_convert.c		\
 		  ft_putwstr.c			\
 		  ft_putwstr_fd.c		\
 		  ft_power_ten.c		\
-		  ft_round_bool.c		\
-		  #ft_print_xc_hexadecimal.c	
+		  ft_round_bool.c			
 
 OBJ		= $(addprefix $(OBJ_PATH)/, $(SRCS_NAME:%.c=%.o))
 ################################################

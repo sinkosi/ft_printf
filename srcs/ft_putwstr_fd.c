@@ -18,7 +18,7 @@ void	ft_putwstr_fd(wchar_t *wstr, int fd)
 	size_t	n;
 
 	i = 0;
-	n = sizeof(wstr);
+	n = (sizeof(wstr) / 2);
 	while (i < n)
 	{
 		ft_putwchar_fd(wstr[i], fd);

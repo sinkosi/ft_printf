@@ -48,7 +48,7 @@ int main(int argc, char **argv)
 
 	//Unsigned Int
 	ft_putendl("\nTEST 5: %u Unsigned Int");
-	ft_printf ("Unsigned integer: %U\n", my_ui);
+	ft_printf ("Unsigned integer: %u\n", my_ui);
   	ft_printf ("Unsigned integer: %U\n", (my_ui * 10));
 	//Check this stuff out
 
@@ -75,15 +75,15 @@ int main(int argc, char **argv)
 	ft_printf("The binary for 5 is %b\n", 5);
 	ft_printf("The binary for 42 is %B\n", 42);
 	ft_printf("The binary for 42 is %B\n", -42);
-	ft_printf("The binary for 42 is %B\n", 2800);
+	ft_printf("The binary for 42 is %b\n", 2800);
 
 	//POINTERS
 	ft_putendl("\nTEST 9: %p Pointers");
 	ft_printf("The memory address of 'my_ui is = %P\n", &my_ui);
 	ft_printf("The memory address of 'my_float' is = %P\n", &my_float);
-	ft_printf("The memory address of 'my_double' is = %P\n", &my_double);
+	ft_printf("The memory address of 'my_double' is = %p\n", &my_double);
 	ft_printf("The memory address of 'my_char \"a\"' is = %P\n", &a);
-	ft_printf("And finally the address of 'str' is %P\n", &str);
+	ft_printf("And finally the address of 'str' is %p\n", &str);
 	
 	//WIDE-CHAR
 	ft_putendl("\nTEST 10: %C Wide-Char");
@@ -98,7 +98,7 @@ int main(int argc, char **argv)
 
 	//WIDE-STR
 	ft_putendl("\nTEST 10: %C Wide-Str");
-	int caps[] = {229, 188, 65, 229};
+	wchar_t caps[] = {229, 188, 65, 229};
 	ft_printf("This is a Wide-Str %S and it's cool\n", caps);
 
 	//COLOURS

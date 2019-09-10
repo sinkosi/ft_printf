@@ -22,14 +22,24 @@ static size_t	ft_num_ulen(uintmax_t n, int base)
 	return (i + 1);
 }
 
-char			*ft_ultoa(uintmax_t n, int base)
+char			*ft_ultoa(uintmax_t nbr, int base)
 {
-	size_t		i;
-	uintmax_t	tmp;
 	char		*str;
+	size_t		len;
 
-	i = 0;
-	tmp = 0;
-	str = "0\0";
+	if (nbr < 0)
+		nbr *= -1;
+	len = ft_numlen(nbr);
+	if (!(str = (char*)malloc(sizeof(char) * (len + 1))))
+		return (NULL);
+	str[len] = '\0';
+	if (nbr == 0)
+		str[0] = '0';
+	while (nbr > 0 && len >= 0)
+	{
+		str[len - 1] = ft_tochar(nbr % 10);
+		nbr /= 10;
+		len--;
+	}
 	return (str);
 }
