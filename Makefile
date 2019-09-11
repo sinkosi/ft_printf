@@ -6,7 +6,7 @@
 #    By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/07/28 10:05:49 by sinkosi           #+#    #+#              #
-#    Updated: 2019/07/28 12:20:23 by sinkosi          ###   ########.fr        #
+#    Updated: 2019/09/11 13:50:26 by sinkosi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -136,7 +136,7 @@ $(NAME):	$(OBJ)
 
 $(OBJ_PATH)/%.o: $(SRCS_PATH)/%.c
 	@mkdir	-p $(OBJ_PATH)
-	@$(CC1) -I $(INC_PATH) -o $@ -c $<
+	@$(CC1) $(FLAGS) -I $(INC_PATH) -o $@ -c $<
 
 clean	:
 	@make -C $(LIBFT_PATH)/ clean

@@ -59,11 +59,11 @@ The binary for 42 is 101010
 The binary for 42 is 101011110000
 
 TEST 9: %p Pointers
-The memory address of 'my_ui is = 0X7FFEE243A9D0
-The memory address of 'my_float' is = 0X7FFEE243A9CC
-The memory address of 'my_double' is = 0x7ffee243a9c0
-The memory address of 'my_char "a"' is = 0X7FFEE243A9E7
-And finally the address of 'str' is 0x7ffee243a9d8
+The memory address of 'my_ui is = 0X7FFEE421B930
+The memory address of 'my_float' is = 0X7FFEE421B92C
+The memory address of 'my_double' is = 0x7ffee421b920
+The memory address of 'my_char "a"' is = 0X7FFEE421B947
+And finally the address of 'str' is 0x7ffee421b938
 
 TEST 10: %C Wide-Char
 This is the output when passed int 65:	A

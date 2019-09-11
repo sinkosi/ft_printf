@@ -6,7 +6,7 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/07 08:42:14 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/08/07 08:46:05 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/09/11 13:52:12 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char			*ft_ultoa(uintmax_t nbr, int base)
 
 	if (nbr < 0)
 		nbr *= -1;
-	len = ft_numlen(nbr);
+	len = ft_num_ulen(nbr, base);
 	if (!(str = (char*)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	str[len] = '\0';
@@ -37,8 +37,8 @@ char			*ft_ultoa(uintmax_t nbr, int base)
 		str[0] = '0';
 	while (nbr > 0 && len >= 0)
 	{
-		str[len - 1] = ft_tochar(nbr % 10);
-		nbr /= 10;
+		str[len - 1] = ft_tochar(nbr % base);
+		nbr /= base;
 		len--;
 	}
 	return (str);

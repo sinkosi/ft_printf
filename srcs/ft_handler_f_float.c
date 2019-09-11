@@ -6,21 +6,11 @@
 /*   By: sinkosi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/28 11:26:33 by sinkosi           #+#    #+#             */
-/*   Updated: 2019/07/28 15:11:51 by sinkosi          ###   ########.fr       */
+/*   Updated: 2019/09/11 13:51:07 by sinkosi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
-
-static void	ft_handler_x_short(t_printf *my_printf, unsigned short n)
-{
-	ft_print_f_float(my_printf, n);
-}
-
-static void	ft_handler_x_char(t_printf *my_printf, unsigned char c)
-{
-	ft_print_f_float(my_printf, c);
-}
 
 void		ft_handler_f_float(t_printf *my_printf, va_list printf_list)
 {
