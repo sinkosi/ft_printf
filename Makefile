@@ -62,7 +62,6 @@ LIBFT_H		= -I ./$(LIBFT_PATH)/includes/
 #	FILES			#
 #################################
 SRCS_NAME	= ft_convert.c		\
-		  ft_error.c			\
 		  ft_flag_check.c		\
 		  ft_flag_hash.c		\
 		  ft_flag_plus.c		\
