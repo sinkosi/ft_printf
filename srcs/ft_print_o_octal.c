@@ -16,7 +16,7 @@ void	ft_print_o_octal(t_printf *my_printf, uintmax_t n, int fd)
 {
 	char *str;
 
-	str = ft_itoa_base(n, 8);
+	str = ft_ltoa_base(n, 8);
 	ft_tolower(my_printf->convert);
 	ft_flag_size(my_printf, ft_strlen(str));
 	ft_flag_width(my_printf, fd);

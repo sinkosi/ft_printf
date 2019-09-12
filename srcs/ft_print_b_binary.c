@@ -16,7 +16,7 @@ void	ft_print_b_binary(t_printf *my_printf, uintmax_t n, int fd)
 {
 	char *str;
 
-	str = ft_itoa_base(n, 2);
+	str = ft_ltoa_base(n, 2);
 	ft_flag_size(my_printf, ft_strlen(str));
 	ft_flag_width(my_printf, fd);
 	ft_flag_precision(my_printf, str, fd);

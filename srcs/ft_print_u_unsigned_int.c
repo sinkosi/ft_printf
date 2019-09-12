@@ -16,7 +16,7 @@ void	ft_print_u_unsigned_int(t_printf *my_printf, uintmax_t n, int fd)
 {
 	char	*str;
 
-	str = ft_ltoa_printf(n);
+	str = ft_ltoa_base(n, 10);
 	ft_flag_size(my_printf, ft_strlen(str));
 	ft_flag_width(my_printf, fd);
 	ft_flag_precision(my_printf, str, fd);

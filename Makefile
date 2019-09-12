@@ -96,9 +96,7 @@ SRCS_NAME	= ft_convert.c		\
 		  ft_print_ws_str.c		\
 		  ft_print_u_unsigned_int.c	\
 		  ft_print_x_hexadecimal.c	\
-		  ft_ltoa_printf.c		\
 		  ft_ltoa_base.c		\
-		  ft_ultoa_printf.c		\
 		  ft_putwchar.c			\
 		  ft_putwchar_fd.c		\
 		  ft_putwstr.c			\

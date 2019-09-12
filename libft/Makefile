@@ -41,7 +41,6 @@ SRC :=		ft_isascii.c	\
 			ft_putchar_fd.c	\
 			ft_strchr_bool.c	\
 			ft_atoi.c		\
-			ft_itoa_base.c	\
 			ft_strlen.c		\
 			ft_strdel.c		\
 			ft_fabs.c		\

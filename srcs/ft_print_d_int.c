@@ -16,9 +16,12 @@ void	ft_print_d_int(t_printf *my_printf, intmax_t n, int fd)
 {
 	char	*str;
 
-	str = ft_ltoa_printf(n);
 	if (n < 0)
+	{	
 		my_printf->flag_plus = -1;
+		n *= -1;
+	}
+	str = ft_ltoa_base(n, 10);
 	ft_flag_size(my_printf, ft_strlen(str));
 	ft_flag_space(my_printf, fd);
 	if (my_printf->prec_width > 0)

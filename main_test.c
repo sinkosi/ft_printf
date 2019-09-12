@@ -50,6 +50,8 @@ int main(int argc, char **argv)
 	ft_putendl("\nTEST 5: %u Unsigned Int");
 	ft_printf ("Unsigned integer: %u\n", my_ui);
   	ft_printf ("Unsigned integer: %U\n", (my_ui * 10));
+	ft_printf ("Unsigned integer: %U\n", (my_ui * -1));
+	//printf ("Unsigned integer: %u\n", (my_ui * -1));
 	//Check this stuff out
 
 	//Hexadecimal
@@ -74,8 +76,8 @@ int main(int argc, char **argv)
 	ft_putendl("\nTEST 8: %b Binary");
 	ft_printf("The binary for 5 is %b\n", 5);
 	ft_printf("The binary for 42 is %B\n", 42);
-	ft_printf("The binary for 42 is %B\n", -42);
-	ft_printf("The binary for 42 is %b\n", 2800);
+	ft_printf("The binary for -7 is %B\n", -7);
+	ft_printf("The binary for 2800 is %b\n", 2800);
 
 	//POINTERS
 	ft_putendl("\nTEST 9: %p Pointers");
