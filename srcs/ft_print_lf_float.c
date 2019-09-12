@@ -17,7 +17,7 @@ static void	ft_size_significand(t_printf *my_printf, char *str, int fd)
 	ft_flag_size(my_printf, ft_strlen(str));
 	if (my_printf->flag_minus == 0 && my_printf->flag_zero == 0
 		&& my_printf->flag_hash == 1)
-		ft_flag_width_fd(my_printf, fd);
+		ft_flag_width(my_printf, fd);
 }
 
 static void	ft_size_mantissa(t_printf *my_printf, char *str, int fd)
@@ -25,7 +25,7 @@ static void	ft_size_mantissa(t_printf *my_printf, char *str, int fd)
 	ft_flag_size(my_printf, ft_strlen(str));
 	if (my_printf->flag_minus == 0 && my_printf->flag_zero == 0
 		&& my_printf->flag_hash == 1)
-		ft_flag_width_fd(my_printf, fd);
+		ft_flag_width(my_printf, fd);
 }
 
 void		ft_print_lf_float(t_printf *my_printf, long double n, int fd)
@@ -44,7 +44,7 @@ void		ft_print_lf_float(t_printf *my_printf, long double n, int fd)
 	ft_flag_size(my_printf, ft_strlen(str));
 	ft_size_significand(my_printf, str, fd);
 	ft_size_mantissa(my_printf, mantissa, fd);
-	ft_flag_width_fd(my_printf, fd);
+	ft_flag_width(my_printf, fd);
 	ft_putstr_fd(str, fd);
 	my_printf->f_return += ft_strlen(str);
 	ft_putstr_fd(".", fd);
@@ -52,6 +52,6 @@ void		ft_print_lf_float(t_printf *my_printf, long double n, int fd)
 	ft_putstr_fd(mantissa, fd);
 	my_printf->f_return += ft_strlen(mantissa);
 	if (my_printf->field_width > 0)
-		ft_flag_width_fd(my_printf, fd);
+		ft_flag_width(my_printf, fd);
 	ft_strdel(&str);
 }

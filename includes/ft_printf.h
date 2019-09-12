@@ -327,53 +327,5 @@ int				ft_round_bool(double nbr);
 
 void			ft_putwchar_fd(wchar_t wc, int fd);
 void			ft_putwstr_fd(wchar_t *wstr, int fd);
-void			ft_flag_hash_fd(t_printf *my_printf, char *str, int fd);
-void			ft_flag_plus_fd(t_printf *my_printf, int fd);
-void			ft_flag_precision_fd(t_printf *my_printf, char *str, int fd);
-void			ft_flag_space_fd(t_printf *my_printf, int fd);
-void			ft_flag_width_fd(t_printf *my_printf, int fd);
-void			ft_print_b_binary_fd(t_printf *my_printf, uintmax_t n,
-		int fd);
-void			ft_print_c_char_fd(t_printf *my_printf, int c, int fd);
-void			ft_print_d_int_fd(t_printf *my_printf, intmax_t n, int fd);
-void			ft_print_f_float_fd(t_printf *my_printf, double n, int fd);
-void			ft_print_lf_float_fd(t_printf *my_printf, long double n,
-		int fd);
-void			ft_print_mod_fd(t_printf *my_printf, int fd);
-void			ft_print_out_fd(t_printf *my_printf, char *str, int fd);
-void			ft_print_o_octal_fd(t_printf *my_printf, uintmax_t n, int fd);
-void			ft_print_p_pointer_fd(t_printf *my_printf, void *pointer,
-		int fd);
-void			ft_print_s_str_fd(t_printf *my_printf, char *str, int fd);
-void			ft_print_u_unsigned_int_fd(t_printf *my_printf, uintmax_t n,
-		int fd);
-void			ft_print_ws_str_fd(t_printf *my_printf, wchar_t *str, int fd);
-void			ft_print_x_hexadecimal_fd(t_printf *my_printf, uintmax_t n,
-		int fd);
-int				ft_dprintf(int fd, const char *parse_str, ...);
-void			ft_convert_fd(t_printf *my_printf, va_list printf_list,
-		char *str, int fd);
-void			ft_handler_convert_fd(t_printf *my_printf,
-		va_list printf_list, int fd);
-void			ft_handler_b_binary_fd(t_printf *my_printf,
-		va_list printf_list, int fd);
-void			ft_handler_c_char_fd(t_printf *my_printf, va_list printf_list,
-		int fd);
-void			ft_handler_d_int_fd(t_printf *my_printf, va_list printf_list,
-		int fd);
-void			ft_handler_f_float_fd(t_printf *my_printf,
-		va_list printf_list, int fd);
-
-void			ft_handler_o_octal_fd(t_printf *my_printf, va_list printf_list,
-		int fd);
-void			ft_handler_p_pointer_fd(t_printf *my_printf,
-		va_list printf_listi, int fd);
-void			ft_handler_s_str_fd(t_printf *my_printf, va_list printf_list,
-		int fd);
-void			ft_handler_x_hexadecimal_fd(t_printf *my_printf,
-		va_list printf_list, int fd);
-
-void			ft_handler_u_unsigned_int_fd(t_printf *my_printf,
-		va_list printf_list, int fd);
 
 #endif
