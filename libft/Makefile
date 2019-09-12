@@ -26,7 +26,29 @@ OBJ_DIR := obj
 #								FILES
 ################################################################################
 
-SRC :=		ft_islower.c	\
+SRC :=		ft_isascii.c	\
+			ft_isdigit.c	\
+			ft_isupper.c	\
+			ft_tolower.c	\
+			ft_numlen.c		\
+			ft_numlen_base.c	\
+			ft_tochar.c		\
+			ft_putchar.c	\
+			ft_putstr.c		\
+			ft_putendl.c	\
+			ft_putchar_fd.c	\
+			ft_strchr_bool.c	\
+			ft_atoi.c		\
+			ft_itoa_base.c	\
+			ft_strlen.c		\
+			ft_strdel.c		\
+			ft_putchar_fd.c	\
+			ft_fabs.c		\
+			ft_putstr_fd.c	\
+			ft_strlowcase.c	\
+			ft_strncpy.c	\
+			ft_strndup.c	#\
+			ft_islower.c	\
 			ft_isupper.c	\
 			ft_isalpha.c	\
 			ft_isdigit.c	\
@@ -136,6 +158,7 @@ SRC :=		ft_islower.c	\
 		  ft_arraydup.c		\
 		  get_next_line.c	\
 		  ft_atoi_base.c	\
+
 #ADD SOURCE FILES HERE ^^^
 OBJ := $(addprefix $(OBJ_DIR)/, $(SRC:%.c=%.o))
 ################################################################################
