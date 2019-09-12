@@ -268,6 +268,8 @@ void			ft_print_e_exponent(t_printf *my_printf, double n);
 */
 void			ft_print_f_float(t_printf *my_printf, double n, int fd);
 
+void			ft_print_lf_float(t_printf *my_printf, long double n, int fd);
+
 /*
 ** FT_PRINT_O_OCTAL - This function will be called by the ft_handler_o_octal
 **		function and print an octal number. The function will convert the
@@ -307,8 +309,6 @@ void			ft_flag_set(t_printf *my_printf, char *str);
 void			ft_flag_reset(t_printf *my_printf);
 void			ft_error(char *str);
 
-char			*ft_ltoa_printf(intmax_t nbr);
-char			*ft_ultoa(uintmax_t nbr, int base);
 char			*ft_ltoa_base(intmax_t value, int base);
 
 void			ft_putwchar(wchar_t wc);
@@ -316,7 +316,7 @@ void			ft_putwchar(wchar_t wc);
 void			ft_putwstr(wchar_t *wstr);
 
 intmax_t		ft_power_ten(double nb, int power);
-void			ft_print_lf_float(t_printf *my_printf, long double n, int fd);
+
 int				ft_round_bool(double nbr);
 
 /*
