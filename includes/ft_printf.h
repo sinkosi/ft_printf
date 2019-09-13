@@ -64,7 +64,6 @@ typedef struct	s_printf
 	int			flag_zero;
 	int			field_width;
 	int			f_return;
-	int			precision;
 	int			prec_width;
 	int			i;
 	int			h;

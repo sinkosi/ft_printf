@@ -18,7 +18,7 @@ void	ft_flag_width(t_printf *my_printf, int fd)
 		my_printf->flag_minus = 2;
 	else if (my_printf->flag_minus == 0 || my_printf->flag_minus == 2)
 	{
-		if (my_printf->flag_zero == 1 && my_printf->precision == 0
+		if (my_printf->flag_zero == 1 && my_printf->prec_width <= 0
 				&& my_printf->flag_minus == 0)
 		{
 			ft_flag_plus(my_printf, fd);
