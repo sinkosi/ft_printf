@@ -48,10 +48,16 @@ h, l and ll.
 READ FT_PRINTF.H THOROUGHLY
 
 # ALSO PRINTS COLOUR
+
 * Check ft_printf.h for colour list
 * Implementation e.g ft_printf("%sThis sentence is in the colour cyan%s, M_CYAN, M_CYAN);
 * It can be used in combination with other colours and other flags like %d, %x, %c etc
 
-# FINAL MARK - 125/100
+# FT_PRINTF TO FILE DESCRIPTOR
 
-* Sans Moulinette
+This printf has the ability to print to a file, but not in colour.
+To do this, please check the init for ft_dprintf.
+There is an example in the main.c
+
+# FINAL MARK - 125/100
+Sans Moulinette
