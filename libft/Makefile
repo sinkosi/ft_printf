@@ -72,7 +72,7 @@ $(NAME): $(OBJ)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@mkdir -p $(OBJ_DIR)
-	@$(CC) -I $(INC_DIR) -o $@ -c $<
+	@$(CC1) -I $(INC_DIR) -o $@ -c $<
 
 clean:
 	@rm -rf $(OBJ_DIR)
