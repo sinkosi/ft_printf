@@ -1,7 +1,17 @@
-# FT_PRINTF
+# FT_PRINTF <!-- omit in toc -->
+
+- [Introduction](#introduction)
+- [Objectives](#objectives)
+- [Mandatory part](#mandatory-part)
+- [How To Use](#how-to-use)
+  - [ALSO PRINTS COLOUR](#also-prints-colour)
+  - [ft_printf To File Descriptor](#ft_printf-to-file-descriptor)
+- [Final Mark - 125/100 👍](#final-mark---125100-)
+
 A recreation of the standard library function Printf. This project is aimed at teaching handling data types and different data structures. In order to complete this project a person must understand Variadic Expressions
 
-# Introduction
+## Introduction
+
 Regardless of the programming language considered, the printf function,(or its equivalents) is always highly useful. The main reason is the ease of its formatting, and the
 
 support of diverse types in variable numbers. Some variations even propose to be able to
@@ -11,7 +21,8 @@ Some also propose to recall this string without printing it. In short, undeniabl
 is a vital function. In this project, we ask you to recode it and add it to your libft so
 that you can use it in all your future projects, such as ft_ls...
 
-# Objectives
+## Objectives
+
 The versatility of the printf function in C represents a great exercise in programming for
 us. This project is of moderate difficulty. It will enable you to discover variadic functions
 in C in a particularly relevant context as well as learn about a great example of a basic
@@ -24,7 +35,8 @@ code properly while keeping in mind that you will have to read again your code i
 weeks or a few months to extend its functionality according to your needs. It would be a
 shame not to being able to do it because your can’t read your own work.
 
-# Mandatory part
+## Mandatory part
+
 • You have to recode the libc’s printf function.
 • Your function will be called ft_printf and will be prototyped similarly to printf.
 • You won’t do the buffer management in the printf function.
@@ -37,7 +49,7 @@ h, l and ll.
 • You must manage the minimum field-width
 • You must manage the precision
 
-# HOW TO USE
+## How To Use
 
 • Run the makefile.
 • Read the contents of ft_printf.h to see what is handled and what is not.
@@ -47,17 +59,18 @@ h, l and ll.
 
 READ FT_PRINTF.H THOROUGHLY
 
-# ALSO PRINTS COLOUR
+### ALSO PRINTS COLOUR
 
-* Check ft_printf.h for colour list
-* Implementation e.g ft_printf("%sThis sentence is in the colour cyan%s, M_CYAN, M_CYAN);
-* It can be used in combination with other colours and other flags like %d, %x, %c etc
+- Check ft_printf.h for colour list
+- Implementation e.g ft_printf("%sThis sentence is in the colour cyan%s, M_CYAN, M_CYAN);
+- It can be used in combination with other colours and other flags like %d, %x, %c etc
 
-# FT_PRINTF TO FILE DESCRIPTOR
+### ft_printf To File Descriptor
 
 This printf has the ability to print to a file, but not in colour.
 To do this, please check the init for ft_dprintf.
 There is an example in the main.c
 
-# FINAL MARK - 125/100
+## Final Mark - 125/100 👍
+
 Sans Moulinette
